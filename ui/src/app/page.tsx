@@ -17,19 +17,19 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mb-6 tracking-tight">
-            Artisan Ice Cream
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+            STREETWEAR ESSENTIALS
           </h1>
           <p className="text-lg sm:text-xl text-[var(--color-text-muted)] mb-8 max-w-2xl mx-auto">
-            Handcrafted in small batches using the finest ingredients from around
-            the world. Every scoop tells a story.
+            Discover the latest trends in fashion. Graphic tees, hoodies, jackets,
+            and more. Your style, your way.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/shop" className="btn btn-primary">
               Shop Now
             </Link>
-            <Link href="/shop?category=vegan" className="btn btn-secondary">
-              Explore Vegan
+            <Link href="/shop?category=hoodies" className="btn btn-secondary">
+              Explore Hoodies
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function HomePage() {
       {/* Categories */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-serif text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
             Shop by Category
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
@@ -50,7 +50,7 @@ export default function HomePage() {
               >
                 <div className="absolute inset-0 bg-[var(--color-secondary)] group-hover:bg-[var(--color-accent)] transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-lg sm:text-xl font-serif tracking-wide group-hover:scale-105 transition-transform">
+                  <span className="text-lg sm:text-xl font-bold tracking-wide group-hover:scale-105 transition-transform">
                     {category.name}
                   </span>
                 </div>
@@ -64,8 +64,8 @@ export default function HomePage() {
       <section className="py-16 sm:py-24 bg-[var(--color-background-alt)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif mb-4 sm:mb-0">
-              Featured Flavors
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-0">
+              New Arrivals
             </h2>
             <Link
               href="/shop"
@@ -85,13 +85,13 @@ export default function HomePage() {
             <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-[var(--color-accent)]/10 text-[var(--color-accent)] rounded-full mb-4">
               Powered by Sift AI
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif mb-4">
-              Find Your Perfect Flavor
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Find Your Perfect Style
             </h2>
             <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-              Use our AI-powered search to discover ice cream based on how you
-              feel, not just what you know. Try "something refreshing" or "best
-              for a date night".
+              Use our AI-powered search to discover clothes based on your mood
+              and style. Try "something for a night out" or "casual streetwear
+              under $30".
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl mb-2">Regular Search</h3>
+              <h3 className="font-bold text-xl mb-2">Regular Search</h3>
               <p className="text-sm text-[var(--color-text-muted)]">
                 Classic keyword search by name, description, or tags
               </p>
@@ -136,9 +136,9 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl mb-2">Sift AI Search</h3>
+              <h3 className="font-bold text-xl mb-2">Sift AI Search</h3>
               <p className="text-sm text-[var(--color-text-muted)]">
-                Semantic search that understands your intent and mood
+                Semantic search that understands your intent and style
               </p>
             </div>
 
@@ -159,7 +159,7 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="font-serif text-xl mb-2">AI Chat</h3>
+              <h3 className="font-bold text-xl mb-2">AI Chat</h3>
               <p className="text-sm text-[var(--color-text-muted)]">
                 Conversational recommendations powered by RAG
               </p>
@@ -193,13 +193,13 @@ export default function HomePage() {
       {/* About Banner */}
       <section className="py-16 sm:py-24 bg-[var(--color-primary)] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-serif mb-6">
-            Crafted with Care
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            Express Your Style
           </h2>
           <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-            Every pint of Van Leeuwen ice cream is made with the same care and
-            attention to detail as the very first batch we made. We source the
-            finest ingredients and craft each flavor by hand.
+            Pull & Bear brings you the latest streetwear trends at affordable
+            prices. From graphic tees to premium hoodies, find pieces that
+            match your unique style.
           </p>
           <Link
             href="/shop"

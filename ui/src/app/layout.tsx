@@ -16,9 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Van Leeuwen | Artisan Ice Cream",
+  title: "Pull & Bear | Fashion & Streetwear",
   description:
-    "Artisan ice cream made with the finest ingredients from around the world. Crafted with care in small batches.",
+    "Discover the latest trends in fashion, streetwear, and casual clothing. Graphic tees, hoodies, jackets, and more.",
 };
 
 export default function RootLayout({

@@ -7,10 +7,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-serif mb-4">Van Leeuwen</h3>
+            <h3 className="text-2xl font-bold mb-4">PULL&amp;BEAR</h3>
             <p className="text-[var(--color-text-muted)] text-sm max-w-md">
-              Artisan ice cream made with the finest ingredients from around the
-              world. Crafted with care in small batches.
+              Discover the latest trends in fashion, streetwear, and casual
+              clothing. Graphic tees, hoodies, jackets, and more.
             </p>
           </div>
 
@@ -30,26 +30,26 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/shop?category=pints"
+                  href="/shop?category=t-shirts"
                   className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
-                  Pints
+                  T-Shirts
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/shop?category=vegan"
+                  href="/shop?category=hoodies"
                   className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
-                  Vegan
+                  Hoodies
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/shop?category=sorbet"
+                  href="/shop?category=jackets"
                   className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
-                  Sorbet
+                  Jackets
                 </Link>
               </li>
             </ul>

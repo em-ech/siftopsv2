@@ -3,8 +3,8 @@
  */
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || "vanleeuwen";
-const STORE_NAME = process.env.NEXT_PUBLIC_STORE_NAME || "Van Leeuwen";
+const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || "pullbear";
+const STORE_NAME = process.env.NEXT_PUBLIC_STORE_NAME || "Pull & Bear";
 
 export interface SiftSearchResult {
   id: string;

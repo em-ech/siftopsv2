@@ -12,8 +12,8 @@ export function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-xl sm:text-2xl font-serif tracking-wide">
-              Van Leeuwen
+            <span className="text-xl sm:text-2xl font-bold tracking-tight">
+              PULL&amp;BEAR
             </span>
           </Link>
 
@@ -26,16 +26,22 @@ export function Header() {
               Shop
             </Link>
             <Link
-              href="/shop?category=vegan"
+              href="/shop?category=t-shirts"
               className="text-sm tracking-wider uppercase hover:text-[var(--color-text-muted)] transition-colors"
             >
-              Vegan
+              T-Shirts
             </Link>
             <Link
-              href="/shop?category=sorbet"
+              href="/shop?category=hoodies"
               className="text-sm tracking-wider uppercase hover:text-[var(--color-text-muted)] transition-colors"
             >
-              Sorbet
+              Hoodies
+            </Link>
+            <Link
+              href="/shop?category=jackets"
+              className="text-sm tracking-wider uppercase hover:text-[var(--color-text-muted)] transition-colors"
+            >
+              Jackets
             </Link>
           </nav>
 
@@ -105,18 +111,25 @@ export function Header() {
                 Shop All
               </Link>
               <Link
-                href="/shop?category=vegan"
+                href="/shop?category=t-shirts"
                 className="text-sm tracking-wider uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Vegan
+                T-Shirts
               </Link>
               <Link
-                href="/shop?category=sorbet"
+                href="/shop?category=hoodies"
                 className="text-sm tracking-wider uppercase"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Sorbet
+                Hoodies
+              </Link>
+              <Link
+                href="/shop?category=jackets"
+                className="text-sm tracking-wider uppercase"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Jackets
               </Link>
             </nav>
           </div>

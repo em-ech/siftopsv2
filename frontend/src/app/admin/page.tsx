@@ -32,7 +32,7 @@ type Tab = "overview" | "ingest" | "catalog" | "settings";
 
 export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<Tab>("overview");
-  const [tenantId, setTenantId] = useState("demo");
+  const [tenantId, setTenantId] = useState("pullbear");
 
   // File upload state
   const [file, setFile] = useState<File | null>(null);
@@ -40,7 +40,7 @@ export default function AdminPage() {
   const [enrichAttributes, setEnrichAttributes] = useState(false);
 
   // WooCommerce sync state
-  const [wcUrl, setWcUrl] = useState("https://vanleeuwenicecream.com");
+  const [wcUrl, setWcUrl] = useState("https://pullandbear.com");
   const [wcKey, setWcKey] = useState("");
   const [wcSecret, setWcSecret] = useState("");
   const [syncing, setSyncing] = useState(false);

@@ -486,5 +486,5 @@ GROUP BY t.id, t.name;
 
 -- Insert sample tenant
 INSERT INTO tenants (id, name, config, plan)
-VALUES ('demo', 'Demo Store', '{"description": "Demo tenant for testing"}', 'free')
+VALUES ('pullbear', 'Pull & Bear', '{"description": "Pull & Bear fashion demo store"}', 'free')
 ON CONFLICT (id) DO NOTHING;
