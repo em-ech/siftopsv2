@@ -2,12 +2,14 @@
 Chat Service
 Handles the RAG (Retrieval-Augmented Generation) pipeline.
 Zero-hallucination: The LLM can ONLY reference retrieved products.
+Includes product data sanitization to prevent product-based injection.
 """
 
-from openai import OpenAI
+from openai import AsyncOpenAI
 from app.core.config import settings
 from app.services.vector_service import vector_service
 from app.services.db_service import db_service
+from app.core.security import sanitizer
 
 
 SYSTEM_PROMPT = """You are a friendly and knowledgeable shopping assistant for {store_name}.
@@ -33,22 +35,30 @@ If the products list is empty or none match, politely let the customer know and 
 
 class ChatService:
     def __init__(self):
-        self.openai = OpenAI(api_key=settings.OPENAI_API_KEY)
+        self.openai = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 
     def format_products_for_prompt(self, products: list[dict]) -> str:
-        """Format retrieved products for the LLM prompt."""
+        """
+        Format retrieved products for the LLM prompt.
+
+        IMPORTANT: Products are sanitized to prevent product-based injection attacks.
+        A malicious product name/description could contain prompt manipulation attempts.
+        """
         if not products:
             return "No products found matching this query."
 
         formatted = []
         for i, p in enumerate(products, 1):
+            # Sanitize product data to prevent injection via product names/descriptions
+            safe_product = sanitizer.sanitize_product_data(p)
+
             formatted.append(
-                f"{i}. {p['name']}\n"
-                f"   Price: ${p['price']}\n"
-                f"   Description: {p['description']}\n"
-                f"   Categories: {', '.join(p['categories']) if p['categories'] else 'N/A'}\n"
-                f"   Link: {p['permalink']}\n"
-                f"   In Stock: {p['stock_status'] == 'instock'}"
+                f"{i}. {safe_product.get('name', 'Unknown')}\n"
+                f"   Price: ${safe_product.get('price', 0)}\n"
+                f"   Description: {safe_product.get('description', 'N/A')}\n"
+                f"   Categories: {', '.join(safe_product.get('categories', [])) if safe_product.get('categories') else 'N/A'}\n"
+                f"   Link: {safe_product.get('permalink', '#')}\n"
+                f"   In Stock: {safe_product.get('stock_status', 'unknown') == 'instock'}"
             )
         return "\n\n".join(formatted)
 
@@ -102,8 +112,8 @@ class ChatService:
         # Add current query
         messages.append({"role": "user", "content": query})
 
-        # Generate response
-        response = self.openai.chat.completions.create(
+        # Generate response (async)
+        response = await self.openai.chat.completions.create(
             model=settings.CHAT_MODEL,
             messages=messages,
             temperature=0.7,

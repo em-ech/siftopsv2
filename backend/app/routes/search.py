@@ -1,9 +1,11 @@
 """
 Search Routes
 Handles semantic search endpoints with tenant isolation and query understanding.
+Includes security: injection detection, input sanitization.
 """
 
 import time
+import logging
 from fastapi import APIRouter, HTTPException, Header
 from pydantic import BaseModel
 from typing import Optional
@@ -11,8 +13,12 @@ from typing import Optional
 from app.services.vector_service import vector_service
 from app.services.query_service import query_service
 from app.services.db_service import db_service
+from app.services.rag.retriever import enhanced_retriever
+from app.core.config import settings
+from app.core.security import injection_detector, sanitizer
 
 router = APIRouter(prefix="/search", tags=["search"])
+logger = logging.getLogger(__name__)
 
 
 # ==================== REQUEST/RESPONSE MODELS ====================
@@ -25,6 +31,7 @@ class SearchRequest(BaseModel):
     use_query_understanding: bool = True  # Whether to parse constraints
     session_id: Optional[str] = None
     source: str = "search_bar"  # search_bar, chat, api
+    strategy: Optional[str] = None  # Override RAG strategy: fast, validated, full
 
 
 class SearchResult(BaseModel):
@@ -43,7 +50,10 @@ class SearchResponse(BaseModel):
     results: list[SearchResult]
     count: int
     query_understanding: Optional[dict] = None  # Extracted constraints
+    validation_summary: Optional[dict] = None  # From enhanced retriever
     search_event_id: Optional[int] = None  # For click tracking
+    strategy_used: Optional[str] = None  # RAG strategy used
+    cache_hit: bool = False
     latency_ms: int = 0
 
 
@@ -59,7 +69,12 @@ class TrackClickRequest(BaseModel):
 @router.post("/", response_model=SearchResponse)
 async def search_products(request: SearchRequest):
     """
-    Semantic product search with HARD tenant isolation.
+    Semantic product search with HARD tenant isolation and security validation.
+
+    Security pipeline:
+    1. Check for prompt injection attempts
+    2. Sanitize query input
+    3. Process search
 
     Features:
     - Natural language query understanding (extracts budget, category, style, etc.)
@@ -78,24 +93,39 @@ async def search_products(request: SearchRequest):
     if not request.tenant_id.strip():
         raise HTTPException(status_code=400, detail="tenant_id is required")
 
+    # Step 1: Check for prompt injection (search queries can also be injection vectors)
+    detection = injection_detector.detect(request.query)
+    if detection.risk_level == "high":
+        logger.warning(
+            f"High-risk injection attempt in search for tenant {request.tenant_id}: "
+            f"{detection.message}"
+        )
+        raise HTTPException(
+            status_code=400,
+            detail="Your search contains invalid content. Please rephrase your query."
+        )
+
+    # Step 2: Sanitize the query
+    safe_query = sanitizer.sanitize_query(request.query)
+
     try:
-        # Step 1: Query understanding (optional)
+        # Step 3: Query understanding (optional)
         constraints_dict = None
-        embedding_query = request.query
+        embedding_query = safe_query
 
         if request.use_query_understanding:
-            query_result = query_service.understand(request.query)
+            query_result = query_service.understand(safe_query)
             constraints_dict = query_result.constraints.to_dict()
             embedding_query = query_result.embedding_query
 
-        # Step 2: Vector search with tenant filter
+        # Step 4: Vector search with tenant filter
         raw_results = vector_service.search(
             query=embedding_query,
             tenant_id=request.tenant_id,
             top_k=request.top_k,
         )
 
-        # Step 3: Apply additional filtering if constraints present
+        # Step 5: Apply additional filtering if constraints present
         # (Price filtering example - for more, add payload indexes in Qdrant)
         if constraints_dict and (constraints_dict.get("budget_max") or constraints_dict.get("budget_min")):
             filtered_results = []
@@ -108,7 +138,7 @@ async def search_products(request: SearchRequest):
                 filtered_results.append(r)
             raw_results = filtered_results
 
-        # Step 4: Format results
+        # Step 6: Format results
         results = [
             SearchResult(
                 product_id=r["product_id"],
@@ -124,10 +154,10 @@ async def search_products(request: SearchRequest):
             for r in raw_results
         ]
 
-        # Step 5: Calculate latency
+        # Step 7: Calculate latency
         latency_ms = int((time.time() - start_time) * 1000)
 
-        # Step 6: Log search event for analytics
+        # Step 8: Log search event for analytics
         search_event_id = None
         try:
             event = db_service.log_search_event(
@@ -167,6 +197,108 @@ async def track_click(request: TrackClickRequest):
         db_service.track_click(request.search_event_id, request.product_id)
         return {"success": True}
     except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# ==================== ENHANCED SEARCH (v2) ====================
+
+
+@router.post("/v2/search", response_model=SearchResponse)
+async def search_products_v2(request: SearchRequest):
+    """
+    Enhanced semantic product search with validation and optional reranking.
+
+    This endpoint uses the new RAG pipeline with:
+    - Security: Injection detection + sanitization
+    - Caching: In-memory cache for repeated queries
+    - Validation: LLM validates results match user constraints
+    - Reranking: Optional LLM reranking for better relevance
+
+    Strategies:
+    - fast: Vector search only (lowest latency)
+    - validated: Vector search + LLM validation (default)
+    - full: Vector search + validation + reranking (best quality)
+
+    Set strategy via request body or use the default from config.
+    """
+    if not request.query.strip():
+        raise HTTPException(status_code=400, detail="Query cannot be empty")
+
+    if not request.tenant_id.strip():
+        raise HTTPException(status_code=400, detail="tenant_id is required")
+
+    # Security check
+    detection = injection_detector.detect(request.query)
+    if detection.risk_level == "high":
+        logger.warning(
+            f"High-risk injection attempt in v2 search for tenant {request.tenant_id}: "
+            f"{detection.message}"
+        )
+        raise HTTPException(
+            status_code=400,
+            detail="Your search contains invalid content. Please rephrase your query."
+        )
+
+    # Sanitize query
+    safe_query = sanitizer.sanitize_query(request.query)
+
+    try:
+        # Use enhanced retriever
+        result = await enhanced_retriever.retrieve(
+            query=safe_query,
+            tenant_id=request.tenant_id,
+            top_k=request.top_k,
+            strategy=request.strategy,
+            use_query_understanding=request.use_query_understanding,
+        )
+
+        # Format results
+        results = [
+            SearchResult(
+                product_id=r["product_id"],
+                name=r["name"],
+                price=r["price"],
+                description=r.get("description"),
+                image_url=r.get("image_url"),
+                permalink=r.get("permalink"),
+                categories=r.get("categories", []),
+                stock_status=r.get("stock_status", "instock"),
+                score=r.get("score", 0.0),
+            )
+            for r in result.results
+        ]
+
+        # Log search event for analytics (non-critical)
+        search_event_id = None
+        try:
+            event = db_service.log_search_event(
+                tenant_id=request.tenant_id,
+                query=request.query,
+                results_count=len(results),
+                result_product_ids=[r.product_id for r in results],
+                parsed_constraints=result.query_understanding,
+                session_id=request.session_id,
+                source=request.source,
+                latency_ms=result.latency_ms,
+            )
+            if event:
+                search_event_id = event.get("id")
+        except Exception:
+            pass
+
+        return SearchResponse(
+            results=results,
+            count=result.count,
+            query_understanding=result.query_understanding,
+            validation_summary=result.validation_summary,
+            search_event_id=search_event_id,
+            strategy_used=result.strategy_used,
+            cache_hit=result.cache_hit,
+            latency_ms=result.latency_ms,
+        )
+
+    except Exception as e:
+        logger.error(f"Enhanced search error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -212,13 +344,17 @@ async def quick_search(
     """
     Fast search endpoint without query understanding.
     Good for autocomplete/typeahead use cases.
+    Includes basic input sanitization.
     """
     if not q.strip():
         return {"results": [], "count": 0}
 
+    # Sanitize the query (quick endpoint, so no injection check - just sanitize)
+    safe_query = sanitizer.sanitize_query(q)
+
     try:
         raw_results = vector_service.search(
-            query=q,
+            query=safe_query,
             tenant_id=tenant_id,
             top_k=limit,
         )

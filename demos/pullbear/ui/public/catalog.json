@@ -1,0 +1,322 @@
+{
+  "products": [
+    {
+      "id": "VL-HC-001",
+      "slug": "honeycomb-ice-cream",
+      "name": "Honeycomb Ice Cream",
+      "price": 12.0,
+      "priceText": "$12.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Creamy vanilla with crunchy honeycomb toffee",
+      "longDescription": "Rich and creamy vanilla ice cream studded with crunchy honeycomb toffee pieces. Made with fresh cream and pure honey from local apiaries.",
+      "mainImage": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=400"
+      ],
+      "categories": [
+        "pints"
+      ],
+      "tags": [],
+      "sku": "VL-HC-001",
+      "url": "/product/honeycomb-ice-cream",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-SP-002",
+      "slug": "sicilian-pistachio",
+      "name": "Sicilian Pistachio",
+      "price": 14.0,
+      "priceText": "$14.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Authentic Sicilian pistachios in creamy gelato",
+      "longDescription": "Authentic pistachio ice cream made with pistachios imported directly from Sicily. Naturally green with an intense nutty flavor.",
+      "mainImage": "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=400"
+      ],
+      "categories": [
+        "pints"
+      ],
+      "tags": [],
+      "sku": "VL-SP-002",
+      "url": "/product/sicilian-pistachio",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-VCD-003",
+      "slug": "vegan-chocolate-chip-cookie-dough",
+      "name": "Vegan Chocolate Chip Cookie Dough",
+      "price": 12.0,
+      "priceText": "$12.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Dairy-free with chunks of cookie dough",
+      "longDescription": "Dairy-free chocolate chip cookie dough ice cream made with oat milk. Chunks of edible cookie dough in every bite.",
+      "mainImage": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400"
+      ],
+      "categories": [
+        "vegan"
+      ],
+      "tags": [],
+      "sku": "VL-VCD-003",
+      "url": "/product/vegan-chocolate-chip-cookie-dough",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-EG-004",
+      "slug": "earl-grey-tea",
+      "name": "Earl Grey Tea",
+      "price": 12.0,
+      "priceText": "$12.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Earl Grey tea-infused creamy delight",
+      "longDescription": "Delicate Earl Grey tea-infused ice cream with hints of bergamot. A sophisticated flavor for tea lovers.",
+      "mainImage": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400"
+      ],
+      "categories": [
+        "pints"
+      ],
+      "tags": [],
+      "sku": "VL-EG-004",
+      "url": "/product/earl-grey-tea",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-SS-005",
+      "slug": "strawberry-shortcake",
+      "name": "Strawberry Shortcake",
+      "price": 12.0,
+      "priceText": "$12.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Fresh strawberries with shortcake pieces",
+      "longDescription": "Fresh strawberry ice cream with pieces of buttery shortcake cookies throughout. Summer in every spoonful.",
+      "mainImage": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400"
+      ],
+      "categories": [
+        "pints"
+      ],
+      "tags": [],
+      "sku": "VL-SS-005",
+      "url": "/product/strawberry-shortcake",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-VMC-006",
+      "slug": "vegan-mint-chip",
+      "name": "Vegan Mint Chip",
+      "price": 12.0,
+      "priceText": "$12.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Refreshing mint with dark chocolate chips",
+      "longDescription": "Refreshing mint ice cream made with coconut cream and dark chocolate chips. Cool and refreshing.",
+      "mainImage": "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=400"
+      ],
+      "categories": [
+        "vegan"
+      ],
+      "tags": [],
+      "sku": "VL-VMC-006",
+      "url": "/product/vegan-mint-chip",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-SC-007",
+      "slug": "salted-caramel",
+      "name": "Salted Caramel",
+      "price": 12.0,
+      "priceText": "$12.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Sweet and salty caramel perfection",
+      "longDescription": "Buttery caramel ice cream with swirls of sea salt caramel sauce. The perfect balance of sweet and salty.",
+      "mainImage": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=400"
+      ],
+      "categories": [
+        "pints"
+      ],
+      "tags": [],
+      "sku": "VL-SC-007",
+      "url": "/product/salted-caramel",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-MS-008",
+      "slug": "mango-sorbet",
+      "name": "Mango Sorbet",
+      "price": 10.0,
+      "priceText": "$10.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Light and tropical Alphonso mango",
+      "longDescription": "Refreshing dairy-free mango sorbet made with ripe Alphonso mangoes. Light and tropical.",
+      "mainImage": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400"
+      ],
+      "categories": [
+        "sorbet"
+      ],
+      "tags": [],
+      "sku": "VL-MS-008",
+      "url": "/product/mango-sorbet",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-OBS-009",
+      "slug": "oat-milk-brown-sugar-chunk",
+      "name": "Oat Milk Brown Sugar Chunk",
+      "price": 13.0,
+      "priceText": "$13.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Oat milk with brown sugar and chocolate",
+      "longDescription": "Oat milk ice cream with brown sugar swirls and chocolate chunks. Rich and indulgent without dairy.",
+      "mainImage": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400"
+      ],
+      "categories": [
+        "vegan"
+      ],
+      "tags": [],
+      "sku": "VL-OBS-009",
+      "url": "/product/oat-milk-brown-sugar-chunk",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-MC-010",
+      "slug": "marionberry-cheesecake",
+      "name": "Marionberry Cheesecake",
+      "price": 13.0,
+      "priceText": "$13.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Marionberries with real cheesecake chunks",
+      "longDescription": "Oregon marionberry ice cream with chunks of real cheesecake. A Pacific Northwest favorite.",
+      "mainImage": "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400"
+      ],
+      "categories": [
+        "pints"
+      ],
+      "tags": [],
+      "sku": "VL-MC-010",
+      "url": "/product/marionberry-cheesecake",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-VPB-011",
+      "slug": "vegan-peanut-butter-brownie",
+      "name": "Vegan Peanut Butter Brownie",
+      "price": 13.0,
+      "priceText": "$13.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Peanut butter with fudgy brownie pieces",
+      "longDescription": "Peanut butter ice cream made with cashew milk and loaded with fudgy brownie pieces.",
+      "mainImage": "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=400"
+      ],
+      "categories": [
+        "vegan"
+      ],
+      "tags": [],
+      "sku": "VL-VPB-011",
+      "url": "/product/vegan-peanut-butter-brownie",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    },
+    {
+      "id": "VL-PFS-012",
+      "slug": "passion-fruit-sorbet",
+      "name": "Passion Fruit Sorbet",
+      "price": 10.0,
+      "priceText": "$10.00",
+      "currency": "$",
+      "inStock": true,
+      "stockText": "In Stock",
+      "shortDescription": "Tangy tropical passion fruit",
+      "longDescription": "Tangy and tropical passion fruit sorbet. Dairy-free and bursting with exotic flavor.",
+      "mainImage": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400",
+      "gallery": [
+        "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400"
+      ],
+      "categories": [
+        "sorbet"
+      ],
+      "tags": [],
+      "sku": "VL-PFS-012",
+      "url": "/product/passion-fruit-sorbet",
+      "ingredients": null,
+      "allergens": [],
+      "additionalInfo": []
+    }
+  ],
+  "categories": [
+    {
+      "name": "Pints",
+      "slug": "pints"
+    },
+    {
+      "name": "Vegan",
+      "slug": "vegan"
+    },
+    {
+      "name": "Sorbet",
+      "slug": "sorbet"
+    }
+  ],
+  "meta": {
+    "totalProducts": 12,
+    "totalCategories": 3
+  }
+}
