@@ -2,28 +2,106 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--color-background-alt)] border-t border-[var(--color-border)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">PULL&amp;BEAR</h3>
-            <p className="text-[var(--color-text-muted)] text-sm max-w-md">
-              Discover the latest trends in fashion, streetwear, and casual
-              clothing. Graphic tees, hoodies, jackets, and more.
-            </p>
+    <footer className="bg-white border-t border-[var(--color-border)]">
+      <div className="w-[90%] mx-auto py-12 sm:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Customer Service */}
+          <div>
+            <h4 className="text-xs font-bold tracking-[0.1em] uppercase mb-5">
+              Customer Service
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Chat
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  WhatsApp
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Contact
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Help */}
+          <div>
+            <h4 className="text-xs font-bold tracking-[0.1em] uppercase mb-5">
+              Help
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Returns
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Delivery
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Payment
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Gift Card
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  FAQs
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Business */}
+          <div>
+            <h4 className="text-xs font-bold tracking-[0.1em] uppercase mb-5">
+              Business
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  About Us
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Store Locator
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Franchise
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors cursor-pointer">
+                  Work with us
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* Shop */}
           <div>
-            <h4 className="text-xs font-medium tracking-widest uppercase mb-4">
+            <h4 className="text-xs font-bold tracking-[0.1em] uppercase mb-5">
               Shop
             </h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="/shop"
-                  className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                  className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
                   All Products
                 </Link>
@@ -31,7 +109,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/shop?category=t-shirts"
-                  className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                  className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
                   T-Shirts
                 </Link>
@@ -39,7 +117,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/shop?category=hoodies"
-                  className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                  className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
                   Hoodies
                 </Link>
@@ -47,39 +125,30 @@ export function Footer() {
               <li>
                 <Link
                   href="/shop?category=jackets"
-                  className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                  className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                 >
                   Jackets
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Info */}
-          <div>
-            <h4 className="text-xs font-medium tracking-widest uppercase mb-4">
-              Information
-            </h4>
-            <ul className="space-y-3">
               <li>
-                <span className="text-sm text-[var(--color-text-muted)]">
-                  Demo Store
-                </span>
-              </li>
-              <li>
-                <span className="text-sm text-[var(--color-text-muted)]">
-                  Data from Crawler
-                </span>
+                <Link
+                  href="/shop?category=trousers"
+                  className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                >
+                  Trousers
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
-          <p className="text-xs text-[var(--color-text-light)] text-center">
-            This is a demo storefront. Product data collected via polite web
-            crawling for educational purposes.
+        <div className="mt-12 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <span className="text-[22px] font-bold tracking-[0.08em]">
+            PULL&amp;BEAR
+          </span>
+          <p className="text-[10px] text-[var(--color-text-light)] tracking-[0.1em] uppercase text-center">
+            Demo storefront powered by Sift AI &mdash; Product data for educational purposes
           </p>
         </div>
       </div>

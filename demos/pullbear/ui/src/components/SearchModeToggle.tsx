@@ -33,33 +33,28 @@ export function SearchModeToggle({
 }: SearchModeToggleProps) {
   return (
     <div className="flex flex-col gap-2">
-      <span className="text-xs font-medium tracking-wide uppercase text-[var(--color-text-muted)]">
+      <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-[var(--color-text-muted)]">
         Search Mode
       </span>
-      <div className="inline-flex rounded-lg bg-[var(--color-background-alt)] p-1">
+      <div className="inline-flex border border-[var(--color-border)]">
         {modes.map((m) => (
           <button
             key={m.id}
             onClick={() => onChange(m.id)}
             disabled={disabled}
             className={`
-              relative px-4 py-2 text-sm font-medium transition-all duration-200
+              relative px-5 py-2.5 text-xs font-bold tracking-[0.08em] uppercase transition-all duration-200
               ${
                 mode === m.id
-                  ? "bg-white text-[var(--color-primary)] shadow-sm"
-                  : "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+                  ? "bg-black text-white"
+                  : "bg-white text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
               }
               ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
-              first:rounded-l-md last:rounded-r-md
+              border-r border-[var(--color-border)] last:border-r-0
             `}
             title={m.description}
           >
             {m.label}
-            {m.id === "sift" && (
-              <span className="ml-1.5 inline-flex items-center justify-center w-4 h-4 text-[10px] bg-[var(--color-accent)] text-white rounded-full">
-                AI
-              </span>
-            )}
           </button>
         ))}
       </div>

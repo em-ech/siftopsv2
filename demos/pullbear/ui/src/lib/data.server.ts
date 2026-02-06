@@ -1,245 +1,259 @@
 /**
  * Server-side data loading utilities
- * Uses filesystem to read catalog during build/SSR
+ * Direct Supabase queries for server components (no HTTP round-trip)
+ * Falls back to static catalog.json if Supabase unavailable
  */
 
 import type { Catalog, Product, Category } from "./types";
+import { getSupabaseServer } from "./supabase";
+import { mapDbProductToProduct, extractCategories } from "./mappers";
 import fs from "fs";
 import path from "path";
 
-// Server-side catalog cache
-let serverCatalogCache: Catalog | null = null;
+const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || "pullbear";
+
+// Server-side catalog cache for static fallback
+let staticCatalogCache: Catalog | null = null;
 
 /**
- * Get catalog data from filesystem (server-side only)
+ * Get all products from Supabase
  */
-export function getCatalog(): Catalog {
-  if (serverCatalogCache) {
-    return serverCatalogCache;
+export async function getProducts(): Promise<Product[]> {
+  const supabase = getSupabaseServer();
+
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("tenant_id", TENANT_ID)
+        .order("name", { ascending: true })
+        .limit(100);
+
+      if (!error && data && data.length > 0) {
+        return data.map(mapDbProductToProduct);
+      }
+    } catch (err) {
+      console.warn("Supabase query failed, using static fallback:", err);
+    }
   }
+
+  return getStaticCatalog().products;
+}
+
+/**
+ * Get categories derived from products
+ */
+export async function getCategories(): Promise<Category[]> {
+  const supabase = getSupabaseServer();
+
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("categories")
+        .eq("tenant_id", TENANT_ID);
+
+      if (!error && data && data.length > 0) {
+        return extractCategories(data);
+      }
+    } catch (err) {
+      console.warn("Supabase categories query failed:", err);
+    }
+  }
+
+  return getStaticCatalog().categories;
+}
+
+/**
+ * Get a single product by slug
+ */
+export async function getProductBySlug(slug: string): Promise<Product | null> {
+  const supabase = getSupabaseServer();
+
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("tenant_id", TENANT_ID)
+        .eq("slug", slug)
+        .single();
+
+      if (!error && data) {
+        return mapDbProductToProduct(data);
+      }
+    } catch (err) {
+      console.warn("Supabase product query failed:", err);
+    }
+  }
+
+  const catalog = getStaticCatalog();
+  return catalog.products.find((p) => p.slug === slug) || null;
+}
+
+/**
+ * Get products by category
+ */
+export async function getProductsByCategory(
+  categorySlug: string
+): Promise<Product[]> {
+  const supabase = getSupabaseServer();
+
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("tenant_id", TENANT_ID)
+        .contains("categories", [categorySlug])
+        .order("name", { ascending: true });
+
+      if (!error && data && data.length > 0) {
+        return data.map(mapDbProductToProduct);
+      }
+    } catch (err) {
+      console.warn("Supabase category query failed:", err);
+    }
+  }
+
+  const catalog = getStaticCatalog();
+  return catalog.products.filter((p) => p.categories.includes(categorySlug));
+}
+
+/**
+ * Get featured products (first N)
+ */
+export async function getFeaturedProducts(limit = 8): Promise<Product[]> {
+  const supabase = getSupabaseServer();
+
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from("products")
+        .select("*")
+        .eq("tenant_id", TENANT_ID)
+        .limit(limit);
+
+      if (!error && data && data.length > 0) {
+        return data.map(mapDbProductToProduct);
+      }
+    } catch (err) {
+      console.warn("Supabase featured query failed:", err);
+    }
+  }
+
+  return getStaticCatalog().products.slice(0, limit);
+}
+
+// ========== Static fallback ==========
+
+function getStaticCatalog(): Catalog {
+  if (staticCatalogCache) return staticCatalogCache;
 
   try {
     const catalogPath = path.join(process.cwd(), "public", "catalog.json");
     if (fs.existsSync(catalogPath)) {
       const data = fs.readFileSync(catalogPath, "utf-8");
-      serverCatalogCache = JSON.parse(data);
-      return serverCatalogCache!;
+      staticCatalogCache = JSON.parse(data);
+      return staticCatalogCache!;
     }
   } catch (error) {
     console.warn("Could not load catalog.json:", error);
   }
 
-  // Return demo data if catalog not found
   return getDemoCatalog();
 }
 
-export function getProducts(): Product[] {
-  const catalog = getCatalog();
-  return catalog.products;
-}
-
-export function getCategories(): Category[] {
-  const catalog = getCatalog();
-  return catalog.categories;
-}
-
-export function getProductBySlug(slug: string): Product | null {
-  const catalog = getCatalog();
-  return catalog.products.find((p) => p.slug === slug) || null;
-}
-
-export function getProductsByCategory(categorySlug: string): Product[] {
-  const catalog = getCatalog();
-  return catalog.products.filter((p) => p.categories.includes(categorySlug));
-}
-
-export function getFeaturedProducts(limit = 8): Product[] {
-  const catalog = getCatalog();
-  return catalog.products.slice(0, limit);
-}
-
-// Demo catalog for development when no crawled data exists
 function getDemoCatalog(): Catalog {
   const demoProducts: Product[] = [
     {
-      id: "pb-001",
-      slug: "black-kikkoman-tshirt",
-      name: "Black Kikkoman T-shirt",
-      price: 10.0,
-      priceText: "$10.00",
+      id: "pb-016",
+      slug: "cowboy-bebop-sweatshirt",
+      name: "Cowboy Bebop Sweatshirt",
+      price: 49.99,
+      priceText: "$49.99",
       currency: "$",
       inStock: true,
       stockText: "In stock",
       shortDescription:
-        "A stylish black T-shirt featuring the iconic Kikkoman design. Perfect for casual urban streetwear.",
-      longDescription:
-        "A stylish black T-shirt featuring the iconic Kikkoman design. Perfect for casual urban streetwear. Made from 100% cotton for all-day comfort.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/912/800/8241912800_4_1_8.jpg",
+        "Cowboy Bebop graphic sweatshirt. A Pull & Bear essential.",
+      longDescription: null,
+      mainImage:
+        "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/517/600/4590517600_4_1_8.jpg",
       gallery: [],
       categories: ["t-shirts"],
       tags: ["casual", "streetwear", "graphic"],
-      sku: "PB-001",
+      sku: "PB-016",
       url: null,
       ingredients: null,
       allergens: [],
       additionalInfo: [{ key: "Material", value: "100% Cotton" }],
     },
     {
-      id: "pb-007",
-      slug: "money-heist-tshirt-black",
-      name: "Black Money Heist x Pull&Bear T-shirt",
-      price: 30.0,
-      priceText: "$30.00",
-      currency: "$",
-      inStock: true,
-      stockText: "In stock",
-      shortDescription:
-        "Limited edition collaboration T-shirt from Money Heist x Pull&Bear collection. Iconic design.",
-      longDescription:
-        "Limited edition collaboration T-shirt from Money Heist x Pull&Bear collection. Iconic design featuring the famous red suit motif. A must-have for fans of the hit Netflix series.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/976/305/8240976305_4_1_8.jpg",
-      gallery: [],
-      categories: ["t-shirts"],
-      tags: ["collaboration", "limited", "netflix"],
-      sku: "PB-007",
-      url: null,
-      ingredients: null,
-      allergens: [],
-      additionalInfo: [{ key: "Material", value: "100% Cotton" }],
-    },
-    {
-      id: "pb-011",
-      slug: "metallica-justice-tshirt",
-      name: "Metallica And Justice for All T-shirt",
-      price: 40.0,
-      priceText: "$40.00",
-      currency: "$",
-      inStock: true,
-      stockText: "In stock",
-      shortDescription:
-        "Official Metallica band T-shirt featuring 'And Justice for All' album artwork. A must for metal fans.",
-      longDescription:
-        "Official Metallica band T-shirt featuring the iconic 'And Justice for All' album artwork. Premium quality print on soft cotton. A must-have for metal fans and music lovers.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/581/800/8241581800_4_1_8.jpg",
-      gallery: [],
-      categories: ["t-shirts"],
-      tags: ["band", "music", "metal"],
-      sku: "PB-011",
-      url: null,
-      ingredients: null,
-      allergens: [],
-      additionalInfo: [{ key: "Material", value: "100% Cotton" }],
-    },
-    {
-      id: "pb-020",
+      id: "pb-005",
       slug: "premium-oversize-hoodie",
       name: "Premium fabric oversize hoodie",
-      price: 15.0,
-      priceText: "$15.00",
+      price: 39.99,
+      priceText: "$39.99",
       currency: "$",
       inStock: true,
       stockText: "In stock",
       shortDescription:
-        "Oversized hoodie crafted from premium fabric. Relaxed fit for maximum comfort and style.",
-      longDescription:
-        "Oversized hoodie crafted from premium fabric. Features a relaxed fit for maximum comfort and style. Perfect for layering or wearing on its own.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/541/711/8591541711_2_6_8.jpg",
+        "Premium fabric oversize hoodie. Relaxed fit for maximum comfort.",
+      longDescription: null,
+      mainImage:
+        "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/541/711/8591541711_2_6_8.jpg",
       gallery: [],
       categories: ["hoodies"],
-      tags: ["oversized", "premium", "comfort"],
-      sku: "PB-020",
+      tags: ["comfort", "layering", "oversized"],
+      sku: "PB-005",
       url: null,
       ingredients: null,
       allergens: [],
       additionalInfo: [{ key: "Material", value: "Cotton Blend" }],
     },
     {
-      id: "pb-027",
-      slug: "black-hoodie-classic",
-      name: "Black hoodie classic",
-      price: 26.0,
-      priceText: "$26.00",
+      id: "pb-021",
+      slug: "quilted-bomber-jacket",
+      name: "Quilted Bomber Jacket",
+      price: 29.99,
+      priceText: "$29.99",
       currency: "$",
       inStock: true,
       stockText: "In stock",
       shortDescription:
-        "Timeless black hoodie for any occasion. A wardrobe staple that never goes out of style.",
-      longDescription:
-        "Timeless black hoodie for any occasion. Features a classic cut with ribbed cuffs and hem. A wardrobe staple that never goes out of style.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/515/800/8591515800_1_1_8.jpg",
-      gallery: [],
-      categories: ["hoodies"],
-      tags: ["black", "classic", "essential"],
-      sku: "PB-027",
-      url: null,
-      ingredients: null,
-      allergens: [],
-      additionalInfo: [{ key: "Material", value: "Cotton Blend" }],
-    },
-    {
-      id: "pb-030",
-      slug: "parka-nylon-details",
-      name: "Parka with nylon details",
-      price: 80.0,
-      priceText: "$80.00",
-      currency: "$",
-      inStock: true,
-      stockText: "In stock",
-      shortDescription:
-        "Premium parka with stylish nylon accents. Perfect for cold weather with urban style.",
-      longDescription:
-        "Premium parka featuring stylish nylon accents and a warm lining. Perfect for cold weather while maintaining urban style. Multiple pockets for practicality.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4751/501/800/4751501800_4_1_8.jpg",
+        "Quilted bomber jacket. Essential outerwear from Pull & Bear.",
+      longDescription: null,
+      mainImage:
+        "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/507/737/8711507737_4_1_8.jpg",
       gallery: [],
       categories: ["jackets"],
-      tags: ["parka", "winter", "premium"],
-      sku: "PB-030",
+      tags: ["outerwear", "bomber"],
+      sku: "PB-021",
       url: null,
       ingredients: null,
       allergens: [],
       additionalInfo: [{ key: "Material", value: "Polyester/Nylon" }],
     },
     {
-      id: "pb-032",
-      slug: "dark-blue-denim-jacket",
-      name: "Dark blue denim jacket",
-      price: 30.0,
-      priceText: "$30.00",
-      currency: "$",
-      inStock: true,
-      stockText: "In stock",
-      shortDescription:
-        "Classic dark blue denim jacket. A timeless piece that works with any outfit.",
-      longDescription:
-        "Classic dark blue denim jacket with a timeless design. Features front button closure and chest pockets. Works perfectly with any casual outfit.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/527/407/8711527407_4_1_8.jpg",
-      gallery: [],
-      categories: ["jackets"],
-      tags: ["denim", "classic", "blue"],
-      sku: "PB-032",
-      url: null,
-      ingredients: null,
-      allergens: [],
-      additionalInfo: [{ key: "Material", value: "100% Cotton Denim" }],
-    },
-    {
-      id: "pb-040",
-      slug: "blue-faded-jeans",
-      name: "Blue Faded standard fit jeans",
+      id: "pb-080",
+      slug: "blue-faded-standard-fit-jeans",
+      name: "Blue Faded Standard Fit Jeans",
       price: 25.0,
       priceText: "$25.00",
       currency: "$",
       inStock: true,
       stockText: "In stock",
       shortDescription:
-        "Classic blue faded jeans in standard fit. The perfect everyday denim.",
-      longDescription:
-        "Classic blue faded jeans in a comfortable standard fit. Features a traditional five-pocket design. The perfect everyday denim for any occasion.",
-      mainImage: "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/800/8676519800_4_1_8.jpg",
+        "Blue faded standard fit jeans. The perfect everyday denim.",
+      longDescription: null,
+      mainImage:
+        "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/800/8676519800_4_1_8.jpg",
       gallery: [],
       categories: ["trousers"],
-      tags: ["denim", "jeans", "blue"],
-      sku: "PB-040",
+      tags: ["bottoms", "denim"],
+      sku: "PB-080",
       url: null,
       ingredients: null,
       allergens: [],
@@ -249,9 +263,9 @@ function getDemoCatalog(): Catalog {
 
   const demoCategories: Category[] = [
     { name: "T-Shirts", slug: "t-shirts" },
-    { name: "Hoodies", slug: "hoodies" },
-    { name: "Jackets", slug: "jackets" },
-    { name: "Trousers", slug: "trousers" },
+    { name: "Hoodies & Sweatshirts", slug: "hoodies" },
+    { name: "Jackets & Coats", slug: "jackets" },
+    { name: "Trousers & Jeans", slug: "trousers" },
   ];
 
   return {

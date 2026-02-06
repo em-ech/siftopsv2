@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Archivo_Narrow } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components";
 
-const inter = Inter({
-  variable: "--font-inter",
+const archivo = Archivo_Narrow({
+  variable: "--font-archivo",
   subsets: ["latin"],
   display: "swap",
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Pull & Bear | Fashion & Streetwear",
+  title: "PULL&BEAR | New Collection Online",
   description:
-    "Discover the latest trends in fashion, streetwear, and casual clothing. Graphic tees, hoodies, jackets, and more.",
+    "Discover the latest trends in men's and women's fashion at PULL&BEAR. T-shirts, hoodies, jackets, trousers and more.",
 };
 
 export default function RootLayout({
@@ -29,9 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased min-h-screen flex flex-col`}
+        className={`${archivo.variable} antialiased min-h-screen flex flex-col`}
         style={{
-          fontFamily: "var(--font-inter), sans-serif",
+          fontFamily: "var(--font-archivo), 'Archivo Narrow', sans-serif",
         }}
       >
         <Header />

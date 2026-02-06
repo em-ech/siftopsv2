@@ -247,7 +247,7 @@ class RateLimiter:
 
     def _clean_old_entries(self, entries: list, cutoff: float) -> list:
         """Remove entries older than cutoff timestamp."""
-        return [e for e in entries if e[0] if isinstance(e, tuple) else e > cutoff]
+        return [e for e in entries if (e[0] if isinstance(e, tuple) else e) > cutoff]
 
     def _get_client_id(self, request: Request) -> str:
         """Get client identifier from request."""

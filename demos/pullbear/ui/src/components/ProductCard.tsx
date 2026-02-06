@@ -10,26 +10,28 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/product/${product.slug}`} className="group block">
       <article className="product-card">
-        {/* Image Container */}
+        {/* Image Container - 3:4 fashion aspect ratio */}
         <div className="aspect-product relative overflow-hidden bg-[var(--color-background-alt)]">
           {product.mainImage ? (
             <Image
               src={product.mainImage}
               alt={product.name}
               fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-cover"
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-[var(--color-text-light)]">No image</span>
+              <span className="text-[var(--color-text-light)] text-xs uppercase tracking-wider">
+                No image
+              </span>
             </div>
           )}
 
           {/* Out of Stock Badge */}
           {!product.inStock && (
-            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1">
-              <span className="text-xs tracking-wider uppercase">
+            <div className="absolute top-0 left-0 bg-black text-white px-3 py-1">
+              <span className="text-[10px] tracking-[0.1em] uppercase font-bold">
                 Sold Out
               </span>
             </div>
@@ -37,22 +39,16 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Content */}
-        <div className="pt-4 pb-2">
-          {/* Categories */}
-          {product.categories.length > 0 && (
-            <p className="text-xs text-[var(--color-text-light)] tracking-wider uppercase mb-1">
-              {product.categories[0]}
-            </p>
-          )}
-
+        <div className="pt-3 pb-1">
           {/* Name */}
-          <h3 className="font-serif text-lg group-hover:text-[var(--color-text-muted)] transition-colors">
+          <h3 className="text-xs font-normal tracking-wide normal-case leading-snug">
             {product.name}
           </h3>
 
           {/* Price */}
-          <p className="mt-1 text-sm">
-            {product.priceText || (product.price ? `$${product.price.toFixed(2)}` : "")}
+          <p className="mt-1 text-xs font-bold">
+            {product.priceText ||
+              (product.price ? `$${product.price.toFixed(2)}` : "")}
           </p>
         </div>
       </article>

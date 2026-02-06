@@ -1,8 +1,9 @@
 /**
- * API service for connecting to Sift Retail AI backend
+ * API service for connecting to Sift Retail AI
+ * Routes through Next.js API routes (Node.js BFF layer)
+ * which proxy to the Python FastAPI backend for AI features
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || "pullbear";
 const STORE_NAME = process.env.NEXT_PUBLIC_STORE_NAME || "Pull & Bear";
 
@@ -32,18 +33,21 @@ export interface ChatResponse {
   products_count: number;
 }
 
+export interface HealthStatus {
+  python: boolean;
+  supabase: boolean;
+}
+
 /**
- * Semantic search using Sift AI backend
+ * Semantic search using Sift AI (via Next.js API route → Python backend)
  */
 export async function siftSearch(
   query: string,
   topK: number = 10
 ): Promise<SiftSearchResponse> {
-  const response = await fetch(`${API_BASE_URL}/search/`, {
+  const response = await fetch("/api/search", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       query,
       tenant_id: TENANT_ID,
@@ -59,17 +63,15 @@ export async function siftSearch(
 }
 
 /**
- * RAG-powered chat using Sift AI backend
+ * RAG-powered chat using Sift AI (via Next.js API route → Python backend)
  */
 export async function siftChat(
   message: string,
   history: ChatMessage[] = []
 ): Promise<ChatResponse> {
-  const response = await fetch(`${API_BASE_URL}/chat/`, {
+  const response = await fetch("/api/chat", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       message,
       tenant_id: TENANT_ID,
@@ -86,15 +88,14 @@ export async function siftChat(
 }
 
 /**
- * Check if the backend is available
+ * Check backend health (Python + Supabase)
  */
-export async function checkBackendHealth(): Promise<boolean> {
+export async function checkBackendHealth(): Promise<HealthStatus> {
   try {
-    const response = await fetch(`${API_BASE_URL}/`, {
-      method: "GET",
-    });
-    return response.ok;
+    const response = await fetch("/api/health");
+    if (!response.ok) return { python: false, supabase: false };
+    return response.json();
   } catch {
-    return false;
+    return { python: false, supabase: false };
   }
 }

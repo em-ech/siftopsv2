@@ -19,7 +19,7 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
     {
       role: "assistant",
       content:
-        "Hi! I'm your Van Leeuwen ice cream expert. Ask me anything about our flavors, ingredients, or help finding the perfect treat!",
+        "Hey! I'm your Pull & Bear style assistant. Ask me about our collection — T-shirts, hoodies, jackets, trousers, or help finding the perfect look.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -41,10 +41,7 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
     const userMessage = input.trim();
     setInput("");
 
-    // Add user message
     setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
-
-    // Add loading indicator
     setMessages((prev) => [
       ...prev,
       { role: "assistant", content: "", isLoading: true },
@@ -52,14 +49,12 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
     setIsLoading(true);
 
     try {
-      // Get chat history (exclude loading message)
       const history: ChatMessage[] = messages
         .filter((m) => !m.isLoading)
         .map((m) => ({ role: m.role, content: m.content }));
 
       const response = await siftChat(userMessage, history);
 
-      // Remove loading and add response
       setMessages((prev) => [
         ...prev.filter((m) => !m.isLoading),
         {
@@ -69,7 +64,6 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
         },
       ]);
 
-      // Notify parent of found products
       if (onProductsFound && response.products.length > 0) {
         onProductsFound(response.products);
       }
@@ -80,7 +74,7 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
         {
           role: "assistant",
           content:
-            "Sorry, I'm having trouble connecting right now. Please make sure the backend server is running on http://localhost:8000",
+            "Sorry, I'm having trouble connecting. Please make sure the backend server is running on http://localhost:8000",
         },
       ]);
     } finally {
@@ -89,43 +83,45 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
   };
 
   const suggestedQuestions = [
-    "What's your best vegan option?",
-    "Something refreshing for summer",
-    "What flavors have chocolate?",
-    "Any nut-free options?",
+    "What hoodies do you have?",
+    "Something for a night out",
+    "Streetwear under $30",
+    "Show me licensed band tees",
   ];
 
   return (
-    <div className="flex flex-col h-[600px] bg-white border border-[var(--color-border)] rounded-lg overflow-hidden">
+    <div className="flex flex-col h-[600px] bg-white border border-[var(--color-border)] overflow-hidden">
       {/* Header */}
-      <div className="px-4 py-3 bg-[var(--color-background-alt)] border-b border-[var(--color-border)]">
+      <div className="px-5 py-4 border-b border-[var(--color-border)]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center">
+          <div className="w-8 h-8 bg-black flex items-center justify-center">
             <svg
-              className="w-5 h-5 text-white"
+              className="w-4 h-4 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              strokeWidth={2}
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
                 d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
               />
             </svg>
           </div>
           <div>
-            <h3 className="font-medium text-sm">Sift AI Assistant</h3>
-            <p className="text-xs text-[var(--color-text-muted)]">
-              Powered by RAG - Only real products, zero hallucinations
+            <h3 className="text-xs font-bold tracking-[0.08em] uppercase">
+              Sift AI Assistant
+            </h3>
+            <p className="text-[10px] text-[var(--color-text-muted)] tracking-wide">
+              Powered by RAG &mdash; Real products only
             </p>
           </div>
         </div>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-5 space-y-4">
         {messages.map((message, index) => (
           <div
             key={index}
@@ -136,64 +132,65 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
             <div
               className={`max-w-[80%] ${
                 message.role === "user"
-                  ? "bg-[var(--color-primary)] text-white"
+                  ? "bg-black text-white"
                   : "bg-[var(--color-background-alt)]"
-              } rounded-lg px-4 py-3`}
+              } px-4 py-3`}
             >
               {message.isLoading ? (
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1">
-                    <span className="w-2 h-2 bg-[var(--color-text-muted)] rounded-full animate-bounce" />
+                    <span className="w-1.5 h-1.5 bg-[var(--color-text-muted)] rounded-full animate-bounce" />
                     <span
-                      className="w-2 h-2 bg-[var(--color-text-muted)] rounded-full animate-bounce"
+                      className="w-1.5 h-1.5 bg-[var(--color-text-muted)] rounded-full animate-bounce"
                       style={{ animationDelay: "0.1s" }}
                     />
                     <span
-                      className="w-2 h-2 bg-[var(--color-text-muted)] rounded-full animate-bounce"
+                      className="w-1.5 h-1.5 bg-[var(--color-text-muted)] rounded-full animate-bounce"
                       style={{ animationDelay: "0.2s" }}
                     />
                   </div>
-                  <span className="text-sm text-[var(--color-text-muted)]">
-                    Thinking...
-                  </span>
                 </div>
               ) : (
                 <>
-                  <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                  <p className="text-xs whitespace-pre-wrap leading-relaxed">
+                    {message.content}
+                  </p>
 
-                  {/* Product recommendations */}
                   {message.products && message.products.length > 0 && (
                     <div className="mt-3 pt-3 border-t border-[var(--color-border)]">
-                      <p className="text-xs font-medium text-[var(--color-text-muted)] mb-2">
-                        Recommended Products:
+                      <p className="text-[10px] font-bold tracking-[0.1em] uppercase text-[var(--color-text-muted)] mb-2">
+                        Recommended:
                       </p>
                       <div className="space-y-2">
                         {message.products.slice(0, 3).map((product) => (
                           <Link
                             key={product.id}
                             href={`/product/${product.id}`}
-                            className="flex items-center gap-3 p-2 bg-white rounded border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-colors"
+                            className="flex items-center gap-3 p-2 bg-white border border-[var(--color-border)] hover:border-black transition-colors"
                           >
                             {product.image_url && (
-                              <div className="relative w-12 h-12 flex-shrink-0">
+                              <div className="relative w-10 h-14 flex-shrink-0">
                                 <Image
                                   src={product.image_url}
                                   alt={product.name}
                                   fill
-                                  className="object-cover rounded"
+                                  className="object-cover"
                                 />
                               </div>
                             )}
                             <div className="flex-1 min-w-0">
-                              <p className="text-sm font-medium truncate">
+                              <p className="text-xs font-medium truncate">
                                 {product.name}
                               </p>
                               <p className="text-xs text-[var(--color-text-muted)]">
-                                ${typeof product.price === 'number' ? product.price.toFixed(2) : parseFloat(String(product.price)).toFixed(2)}
+                                $
+                                {typeof product.price === "number"
+                                  ? product.price.toFixed(2)
+                                  : parseFloat(String(product.price)).toFixed(2)}
                               </p>
                             </div>
-                            <span className="text-xs text-[var(--color-accent)]">
-                              {Math.round(product.score * 100)}% match
+                            <span className="text-[10px] text-[var(--color-text-muted)]">
+                              {Math.round(product.score * 100)}%
                             </span>
                           </Link>
                         ))}
@@ -210,8 +207,8 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
 
       {/* Suggested Questions */}
       {messages.length <= 1 && (
-        <div className="px-4 pb-2">
-          <p className="text-xs text-[var(--color-text-muted)] mb-2">
+        <div className="px-5 pb-3">
+          <p className="text-[10px] tracking-[0.1em] uppercase text-[var(--color-text-muted)] mb-2">
             Try asking:
           </p>
           <div className="flex flex-wrap gap-2">
@@ -219,7 +216,7 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
               <button
                 key={q}
                 onClick={() => setInput(q)}
-                className="text-xs px-3 py-1.5 bg-[var(--color-background-alt)] hover:bg-[var(--color-border)] rounded-full transition-colors"
+                className="text-[10px] tracking-wide px-3 py-1.5 border border-[var(--color-border)] hover:border-black transition-colors"
               >
                 {q}
               </button>
@@ -238,25 +235,25 @@ export function ChatPanel({ onProductsFound }: ChatPanelProps) {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about flavors, ingredients, recommendations..."
+            placeholder="Ask about styles, outfits, recommendations..."
             disabled={isLoading}
-            className="flex-1 px-4 py-3 border border-[var(--color-border)] focus:border-[var(--color-primary)] focus:outline-none rounded-lg disabled:opacity-50"
+            className="flex-1 px-4 py-3 border border-[var(--color-border)] focus:border-black focus:outline-none text-xs disabled:opacity-50"
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="px-6 py-3 bg-[var(--color-primary)] text-white rounded-lg hover:bg-[var(--color-primary)]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-5 py-3 bg-black text-white hover:bg-[var(--color-primary-hover)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              strokeWidth={2}
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
                 d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
               />
             </svg>
