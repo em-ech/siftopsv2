@@ -25,6 +25,17 @@ export async function POST(request: NextRequest) {
     }
 
     const data = await response.json();
+
+    // Map backend product_id to frontend id
+    if (data.results) {
+      data.results = data.results.map(
+        (p: Record<string, unknown>) => ({
+          ...p,
+          id: p.product_id || p.id,
+        })
+      );
+    }
+
     return NextResponse.json(data);
   } catch (error) {
     console.error("Search proxy error:", error);
