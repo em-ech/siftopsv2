@@ -52,12 +52,15 @@ class ChatService:
             # Sanitize product data to prevent injection via product names/descriptions
             safe_product = sanitizer.sanitize_product_data(p)
 
+            permalink = safe_product.get('permalink', '') or ''
+            link_line = f"   Link: {permalink}\n" if permalink else ""
+
             formatted.append(
                 f"{i}. {safe_product.get('name', 'Unknown')}\n"
                 f"   Price: ${safe_product.get('price', 0)}\n"
                 f"   Description: {safe_product.get('description', 'N/A')}\n"
                 f"   Categories: {', '.join(safe_product.get('categories', [])) if safe_product.get('categories') else 'N/A'}\n"
-                f"   Link: {safe_product.get('permalink', '#')}\n"
+                f"{link_line}"
                 f"   In Stock: {safe_product.get('stock_status', 'unknown') == 'instock'}"
             )
         return "\n\n".join(formatted)

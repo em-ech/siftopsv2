@@ -21,12 +21,19 @@ import type { Product, Category, SortOption } from "@/lib/types";
 function ShopPageContent() {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get("category");
+  const modeParam = searchParams.get("mode");
 
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [searchMode, setSearchMode] = useState<SearchMode>("regular");
+  const initialMode: SearchMode =
+    modeParam === "sift"
+      ? "sift"
+      : modeParam === "chat"
+      ? "chat"
+      : "regular";
+  const [searchMode, setSearchMode] = useState<SearchMode>(initialMode);
   const [healthStatus, setHealthStatus] = useState<HealthStatus | null>(null);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -63,6 +70,12 @@ function ShopPageContent() {
   useEffect(() => {
     setSelectedCategory(categoryParam);
   }, [categoryParam]);
+
+  useEffect(() => {
+    if (modeParam === "sift") setSearchMode("sift");
+    else if (modeParam === "chat") setSearchMode("chat");
+    else if (modeParam === "search") setSearchMode("regular");
+  }, [modeParam]);
 
   useEffect(() => {
     if (searchMode !== "sift" || !searchQuery.trim()) {

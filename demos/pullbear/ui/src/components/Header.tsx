@@ -79,9 +79,9 @@ export function Header() {
 
           {/* Right: Icons */}
           <div className="flex items-center gap-5">
-            {/* Search */}
+            {/* Search - navigates to shop page with search mode */}
             <Link
-              href="/shop"
+              href="/shop?mode=search"
               className="hover:opacity-60 transition-opacity"
               aria-label="Search"
             >
@@ -235,7 +235,7 @@ export function Header() {
                 <ul className="space-y-1">
                   <li>
                     <Link
-                      href="/shop"
+                      href="/shop?mode=sift"
                       className="block py-2 text-xs tracking-[0.1em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -244,7 +244,7 @@ export function Header() {
                   </li>
                   <li>
                     <Link
-                      href="/shop"
+                      href="/shop?mode=chat"
                       className="block py-2 text-xs tracking-[0.1em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >

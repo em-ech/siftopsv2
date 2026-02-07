@@ -34,9 +34,11 @@ class Settings(BaseModel):
 
     # CORS
     CORS_ORIGINS: list = [
-        "http://localhost:3000",
-        "http://localhost:3001",
-        "https://*.vercel.app",
+        origin.strip()
+        for origin in os.getenv(
+            "CORS_ORIGINS",
+            "http://localhost:3000,http://localhost:3001,https://*.vercel.app"
+        ).split(",")
     ]
 
     # Security - Rate Limiting

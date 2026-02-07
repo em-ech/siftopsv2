@@ -2,891 +2,980 @@
   {
     "id": "pb-001",
     "name": "Contrast trainers",
-    "description": "Contrast trainers. Comfortable and stylish for everyday wear.",
+    "description": "Two-tone contrast trainers with a chunky sole and padded collar. A modern silhouette for everyday streetwear.",
     "price": 49.99,
-    "category": "Hoodies",
+    "category": "Shoes",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8591/910/501/8591910501_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "footwear,trainers",
+    "permalink": "https://www.pullandbear.com/search?query=Contrast%20trainers"
   },
   {
     "id": "pb-002",
     "name": "Cowboy Bebop sweatshirt with blue print",
-    "description": "Cowboy Bebop sweatshirt with blue print. Comfortable and stylish for everyday wear.",
+    "description": "Relaxed-fit sweatshirt featuring a bold Cowboy Bebop anime print in blue tones. A standout piece for fans of the iconic series.",
     "price": 29.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/509/809/8591509809_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Cowboy%20Bebop%20sweatshirt%20with%20blue%20print"
   },
   {
     "id": "pb-003",
     "name": "AC/DC Moneytalks hoodie",
-    "description": "AC/DC Moneytalks hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Pullover hoodie with a vintage-inspired AC/DC Moneytalks graphic on the front. Soft fleece lining and a drawstring hood for a classic rock look.",
     "price": 29.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8591/913/400/8591913400_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=AC%2FDC%20Moneytalks%20hoodie"
   },
   {
     "id": "pb-004",
     "name": "Star Print Hoodie",
-    "description": "Star Print Hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Soft hoodie with an all-over star print pattern and kangaroo pocket. A playful twist on a wardrobe staple.",
     "price": 25.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8591/914/403/8591914403_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Star%20Print%20Hoodie"
   },
   {
     "id": "pb-005",
     "name": "Circle Graphic Sweatshirt",
-    "description": "Circle Graphic Sweatshirt. Comfortable and stylish for everyday wear.",
+    "description": "Crew-neck sweatshirt with a bold circle graphic design on the chest. Clean lines and a regular fit for easy layering.",
     "price": 25.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8591/914/606/8591914606_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Circle%20Graphic%20Sweatshirt"
   },
   {
     "id": "pb-006",
     "name": "Basic Oversized Hoodie",
-    "description": "Basic Oversized Hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Relaxed oversized hoodie in a drop-shoulder cut with ribbed cuffs and hem. The go-to layering piece for effortless streetwear.",
     "price": 29.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8591/915/500/8591915500_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering,oversized"
+    "tags": "comfort,layering,oversized",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20Oversized%20Hoodie"
   },
   {
     "id": "pb-007",
     "name": "Mona-lisa HOODIE",
-    "description": "Mona-lisa HOODIE. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie featuring a striking Mona Lisa art-inspired graphic print. Soft brushed fleece interior with a drawstring hood.",
     "price": 25.66,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/505/710/8591505710_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Mona-lisa%20HOODIE"
   },
   {
     "id": "pb-008",
     "name": "World-print hoodie",
-    "description": "World-print hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie with an eye-catching world map graphic across the back. Cosy fleece fabric with a front kangaroo pocket.",
     "price": 29.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/552/800/4590552800_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=World-print%20hoodie"
   },
   {
     "id": "pb-009",
     "name": "Naruto Hoodie",
-    "description": "Naruto Hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Pullover hoodie with a Naruto anime character graphic. Soft-touch fabric and ribbed trims for a comfortable, collector-worthy fit.",
     "price": 25.66,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/950/807/8591950807_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Naruto%20Hoodie"
   },
   {
     "id": "pb-010",
     "name": "Hoodie with leaf",
-    "description": "Hoodie with leaf. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie with a nature-inspired leaf motif print on the chest. Brushed cotton blend for warmth and a relaxed silhouette.",
     "price": 29.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4590/502/606/4590502606_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Hoodie%20with%20leaf"
   },
   {
     "id": "pb-011",
     "name": "Pouch pocket hoodie",
-    "description": "Pouch pocket hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Minimalist hoodie with a front pouch pocket and adjustable drawstring hood. Clean design in a regular fit for everyday versatility.",
     "price": 25.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8591/513/712/8591513712_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Pouch%20pocket%20hoodie"
   },
   {
     "id": "pb-012",
     "name": "Naruto with blue",
-    "description": "Naruto with blue. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie featuring a Naruto graphic print with blue accent tones. Fleece-lined with a kangaroo pocket for anime fans.",
     "price": 31.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/574/403/4590574403_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Naruto%20with%20blue"
   },
   {
     "id": "pb-013",
     "name": "Patch Hoodie",
-    "description": "Patch Hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie with embroidered patch detailing on the chest. Soft cotton-blend fabric with ribbed cuffs and a classic fit.",
     "price": 27.33,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/544/800/4590544800_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Patch%20Hoodie"
   },
   {
     "id": "pb-014",
     "name": "Contrast Patch Hoodie",
-    "description": "Contrast Patch Hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie with contrast-coloured patch appliques for a bold, layered look. Drawstring hood and pouch pocket in a comfortable regular fit.",
     "price": 28.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/548/803/4590548803_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Contrast%20Patch%20Hoodie"
   },
   {
     "id": "pb-015",
     "name": "Hoodie With Graphic Design",
-    "description": "Hoodie With Graphic Design. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie with a large-scale graphic print across the front. Fleece-backed fabric and an oversized cut for a street-ready vibe.",
     "price": 27.33,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/555/251/4590555251_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Hoodie%20With%20Graphic%20Design"
   },
   {
     "id": "pb-016",
     "name": "Cowboy Bebop Sweatshirt",
-    "description": "Cowboy Bebop Sweatshirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Crew-neck sweatshirt with a Cowboy Bebop anime collaboration print. Relaxed fit in soft loopback cotton for casual layering.",
     "price": 49.99,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/517/600/4590517600_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,band"
+    "tags": "casual,streetwear,band",
+    "permalink": "https://www.pullandbear.com/search?query=Cowboy%20Bebop%20Sweatshirt"
   },
   {
     "id": "pb-017",
     "name": "Basic Colourful T-shirt",
-    "description": "Basic Colourful T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Lightweight T-shirt in a vibrant colourway with a round neck and short sleeves. A simple, versatile piece that adds a pop of colour.",
     "price": 29.99,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/961/251/4590961251_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20Colourful%20T-shirt"
   },
   {
     "id": "pb-018",
     "name": "Round-Neck Ramones",
-    "description": "Round-Neck Ramones. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Classic round-neck T-shirt with a Ramones band logo graphic. Regular fit in soft jersey cotton for a timeless punk-rock look.",
     "price": 25.99,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/962/800/4590962800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,band"
+    "tags": "casual,streetwear,band",
+    "permalink": "https://www.pullandbear.com/search?query=Round-Neck%20Ramones"
   },
   {
     "id": "pb-019",
     "name": "Tupac Until The End",
-    "description": "Tupac Until The End. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt featuring a Tupac 'Until The End' tribute graphic print. Relaxed cut in breathable cotton for a laid-back hip-hop aesthetic.",
     "price": 29.99,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/572/800/4590572800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,band"
+    "tags": "casual,streetwear,band",
+    "permalink": "https://www.pullandbear.com/search?query=Tupac%20Until%20The%20End"
   },
   {
     "id": "pb-020",
     "name": "Hoodie with Towel Fabric",
-    "description": "Hoodie with Towel Fabric. Comfortable and stylish for everyday wear.",
+    "description": "Textured hoodie crafted from soft towel-style terry fabric. A unique tactile finish with a relaxed fit and kangaroo pocket.",
     "price": 49.99,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/503/800/8591503800_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Hoodie%20with%20Towel%20Fabric"
   },
   {
     "id": "pb-021",
     "name": "Quited Bomber Jacket",
-    "description": "Quited Bomber Jacket. Essential outerwear from Pull & Bear.",
+    "description": "Quilted bomber jacket with a diamond-stitch pattern and ribbed collar, cuffs, and hem. Lightweight padding for transitional weather.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/507/737/8711507737_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Quited%20Bomber%20Jacket"
   },
   {
     "id": "pb-022",
     "name": "PUFFER JACKET WITH CONTRAST ZIPS",
-    "description": "PUFFER JACKET WITH CONTRAST ZIPS. Essential outerwear from Pull & Bear.",
+    "description": "Padded puffer jacket with bold contrast-coloured zip fastenings. High collar and side pockets for warmth with a sporty edge.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4714/511/085/4714511085_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=PUFFER%20JACKET%20WITH%20CONTRAST%20ZIPS"
   },
   {
     "id": "pb-023",
     "name": "Bomber jacket with deta",
-    "description": "Bomber jacket with deta. Essential outerwear from Pull & Bear.",
+    "description": "Bomber jacket with contrast detailing on the sleeves and ribbed trims. A lightweight layer with a zip-front closure.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/592/800/8711592800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Bomber%20jacket%20with%20deta"
   },
   {
     "id": "pb-024",
     "name": "Bomber Jacket",
-    "description": "Bomber Jacket. Essential outerwear from Pull & Bear.",
+    "description": "Classic bomber jacket with a clean silhouette, ribbed collar, and zip-front closure. A timeless outerwear essential for any season.",
     "price": 25.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/507/501/8711507501_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Bomber%20Jacket"
   },
   {
     "id": "pb-025",
     "name": "Contrast Versity Bomber",
-    "description": "Contrast Versity Bomber. Essential outerwear from Pull & Bear.",
+    "description": "Varsity-style bomber with contrast sleeves and snap-button front. Embroidered patch details give it an authentic collegiate feel.",
     "price": 45.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/573/800/8711573800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Contrast%20Versity%20Bomber"
   },
   {
     "id": "pb-026",
     "name": "Coat with contrast hood",
-    "description": "Coat with contrast hood. Essential outerwear from Pull & Bear.",
+    "description": "Mid-length coat with a contrast-coloured detachable hood. Zip-and-button closure with multiple pockets for a functional layered look.",
     "price": 45.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/507/800/8711507800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Coat%20with%20contrast%20hood"
   },
   {
     "id": "pb-027",
     "name": "Denim varsity bomber",
-    "description": "Denim varsity bomber. Essential outerwear from Pull & Bear.",
+    "description": "Varsity bomber jacket in washed denim with contrast ribbed trims. A casual hybrid design that blends denim and bomber styling.",
     "price": 45.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8712/510/400/8712510400_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,denim"
+    "tags": "outerwear,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Denim%20varsity%20bomber"
   },
   {
     "id": "pb-028",
     "name": "Lightweight faux suede",
-    "description": "Lightweight faux suede. Essential outerwear from Pull & Bear.",
+    "description": "Lightweight jacket in soft faux suede with a clean collar and snap-button closure. A refined layer for mild-weather styling.",
     "price": 45.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4714/502/800/4714502800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Lightweight%20faux%20suede"
   },
   {
     "id": "pb-029",
     "name": "Lightweight zipped bo",
-    "description": "Lightweight zipped bo. Essential outerwear from Pull & Bear.",
+    "description": "Lightweight zip-up bomber with a streamlined fit and elasticated trims. Easy to pack and ideal for layering on cooler days.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/504/800/8711504800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Lightweight%20zipped%20bo"
   },
   {
     "id": "pb-030",
     "name": "Bomber jacket with det",
-    "description": "Bomber jacket with det. Essential outerwear from Pull & Bear.",
+    "description": "Bomber jacket with removable detail accents and a zip-front closure. Ribbed collar and cuffs complete the classic silhouette.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/592/505/8711592505_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Bomber%20jacket%20with%20det"
   },
   {
     "id": "pb-031",
     "name": "Lightweight NASA",
-    "description": "Lightweight NASA. Essential outerwear from Pull & Bear.",
+    "description": "Lightweight jacket with NASA-branded graphics and patches. A space-inspired windbreaker design with a front zip and side pockets.",
     "price": 19.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4711/569/800/4711569800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Lightweight%20NASA"
   },
   {
     "id": "pb-032",
     "name": "Reversible nylon bomber",
-    "description": "Reversible nylon bomber. Essential outerwear from Pull & Bear.",
+    "description": "Two-in-one reversible bomber in smooth nylon, offering two distinct looks. Lightweight construction with ribbed trims on both sides.",
     "price": 19.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/536/505/8711536505_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Reversible%20nylon%20bomber"
   },
   {
     "id": "pb-033",
     "name": "Lightweight puffer jacket with zip",
-    "description": "Lightweight puffer jacket with zip. Essential outerwear from Pull & Bear.",
+    "description": "Lightweight puffer jacket with a full-zip closure and stand-up collar. Packable insulation for easy travel and transitional layering.",
     "price": 25.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/504/505/8711504505_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Lightweight%20puffer%20jacket%20with%20zip"
   },
   {
     "id": "pb-034",
     "name": "Basic STWD puffer jacket",
-    "description": "Basic STWD puffer jacket. Essential outerwear from Pull & Bear.",
+    "description": "Padded puffer jacket with STWD branding and a high-neck collar. Quilted panels and side pockets for a clean, warm silhouette.",
     "price": 39.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/536/401/8711536401_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20STWD%20puffer%20jacket"
   },
   {
     "id": "pb-035",
     "name": "Lightweight puffer jack",
-    "description": "Lightweight puffer jack. Essential outerwear from Pull & Bear.",
+    "description": "Ultra-light puffer jacket with channel quilting and an elasticated hem. Compact and warm for on-the-go layering.",
     "price": 19.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/911/800/8711911800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Lightweight%20puffer%20jack"
   },
   {
     "id": "pb-036",
     "name": "Basic puffer gilet",
-    "description": "Basic puffer gilet. Essential outerwear from Pull & Bear.",
+    "description": "Sleeveless puffer gilet with a stand-up collar and zip closure. Lightweight insulation that layers easily over hoodies or tees.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/504/620/8711504620_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20puffer%20gilet"
   },
   {
     "id": "pb-037",
     "name": "Puffer jacket with contras",
-    "description": "Puffer jacket with contras. Essential outerwear from Pull & Bear.",
+    "description": "Puffer jacket with contrast-coloured panelling and a zip-front closure. Padded construction with a modern colour-blocked design.",
     "price": 29.99,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4714/502/778/4714502778_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Puffer%20jacket%20with%20contras"
   },
   {
     "id": "pb-038",
     "name": "Black Kikkoman T-shirt",
-    "description": "Black Kikkoman T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Black T-shirt with a licensed Kikkoman soy sauce graphic print. Relaxed fit in soft cotton for a playful branded streetwear look.",
     "price": 10.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/912/800/8241912800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,graphic"
+    "tags": "casual,streetwear,graphic",
+    "permalink": "https://www.pullandbear.com/search?query=Black%20Kikkoman%20T-shirt"
   },
   {
     "id": "pb-039",
     "name": "Mona Lisa slogan T-shirt",
-    "description": "Mona Lisa slogan T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt featuring a Mona Lisa artwork print paired with a bold slogan. Regular fit in lightweight cotton with a crew neck.",
     "price": 50.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/578/250/8241578250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,graphic"
+    "tags": "casual,streetwear,graphic",
+    "permalink": "https://www.pullandbear.com/search?query=Mona%20Lisa%20slogan%20T-shirt"
   },
   {
     "id": "pb-040",
     "name": "White Kikkoman T-shirt",
-    "description": "White Kikkoman T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "White T-shirt with a retro Kikkoman bottle graphic on the front. Soft cotton jersey in a relaxed casual fit.",
     "price": 16.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/565/250/8241565250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,graphic"
+    "tags": "casual,streetwear,graphic",
+    "permalink": "https://www.pullandbear.com/search?query=White%20Kikkoman%20T-shirt"
   },
   {
     "id": "pb-041",
     "name": "Plush T-shirt with panels",
-    "description": "Plush T-shirt with panels. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt crafted from soft plush fabric with contrast panel inserts. A textured, elevated take on a casual short-sleeve tee.",
     "price": 16.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/905/251/8591905251_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Plush%20T-shirt%20with%20panels"
   },
   {
     "id": "pb-042",
     "name": "Lakewoober Observatory T-shirt",
-    "description": "Lakewoober Observatory T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt with a vintage-style Lakewoober Observatory graphic print. Crew neck and relaxed fit in breathable cotton.",
     "price": 13.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4242/573/800/4242573800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Lakewoober%20Observatory%20T-shirt"
   },
   {
     "id": "pb-043",
     "name": "Back down to earth T-shirt",
-    "description": "Back down to earth T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt with a 'Back Down to Earth' slogan and space-themed graphic. Relaxed fit in soft cotton for a casual, statement-making look.",
     "price": 50.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/517/250/8241517250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Back%20down%20to%20earth%20T-shirt"
   },
   {
     "id": "pb-044",
     "name": "White Healthy Habits T-shirt",
-    "description": "White Healthy Habits T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "White T-shirt with a 'Healthy Habits' typographic print. Clean minimal design in a regular fit for easy everyday styling.",
     "price": 25.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/569/500/8240569500_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=White%20Healthy%20Habits%20T-shirt"
   },
   {
     "id": "pb-045",
     "name": "Magnetic Wild Soul T-shirt",
-    "description": "Magnetic Wild Soul T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt with a bold 'Magnetic Wild Soul' graphic across the chest. Lightweight cotton in a standard fit for everyday wear.",
     "price": 20.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/519/250/8241519250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Magnetic%20Wild%20Soul%20T-shirt"
   },
   {
     "id": "pb-046",
     "name": "White T-shirt with STWD illustration",
-    "description": "White T-shirt with STWD illustration. A Pull & Bear essential for your casual wardrobe.",
+    "description": "White T-shirt featuring an exclusive STWD illustration print on the front. Regular fit in soft jersey cotton for a branded street look.",
     "price": 30.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/9247/599/712/9247599712_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=White%20T-shirt%20with%20STWD%20illustration"
   },
   {
     "id": "pb-047",
     "name": "White Money Heist x Pull&Bear T-shirt",
-    "description": "White Money Heist x Pull&Bear T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Limited-edition collaboration T-shirt from the Money Heist x Pull&Bear collection. White cotton tee with an iconic Dali mask graphic.",
     "price": 40.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/979/420/8240979420_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,graphic"
+    "tags": "casual,streetwear,graphic",
+    "permalink": "https://www.pullandbear.com/search?query=White%20Money%20Heist%20x%20Pull%26Bear%20T-shirt"
   },
   {
     "id": "pb-048",
     "name": "Black Money Heist x Pull&Bear T-shirt",
-    "description": "Black Money Heist x Pull&Bear T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Black T-shirt from the Money Heist x Pull&Bear collaboration with a themed graphic print. Relaxed fit in soft cotton jersey.",
     "price": 30.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/976/305/8240976305_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,graphic"
+    "tags": "casual,streetwear,graphic",
+    "permalink": "https://www.pullandbear.com/search?query=Black%20Money%20Heist%20x%20Pull%26Bear%20T-shirt"
   },
   {
     "id": "pb-049",
     "name": "Pink Pepsi T-shirt",
-    "description": "Pink Pepsi T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Pink T-shirt with a retro Pepsi logo collaboration print. Lightweight cotton in a regular fit for a nostalgic branded look.",
     "price": 27.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/943/629/8240943629_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,graphic"
+    "tags": "casual,streetwear,graphic",
+    "permalink": "https://www.pullandbear.com/search?query=Pink%20Pepsi%20T-shirt"
   },
   {
     "id": "pb-050",
     "name": "Basic muscle fit T-shirt",
-    "description": "Basic muscle fit T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Slim muscle-fit T-shirt that hugs the body for a sharp, athletic silhouette. Stretch cotton blend with a crew neck.",
     "price": 30.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8695/906/809/8695906809_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20muscle%20fit%20T-shirt"
   },
   {
     "id": "pb-051",
     "name": "Metallica...And justice for all T-shirt",
-    "description": "Metallica...And justice for all T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt featuring the iconic Metallica '...And Justice for All' album artwork. A must-have for metal fans in soft cotton jersey.",
     "price": 40.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/581/800/8241581800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,band"
+    "tags": "casual,streetwear,band",
+    "permalink": "https://www.pullandbear.com/search?query=Metallica...And%20justice%20for%20all%20T-shirt"
   },
   {
     "id": "pb-052",
     "name": "T-shirt",
-    "description": "T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Essential plain T-shirt in a regular fit with a crew neckline. Soft cotton fabric for a clean, no-fuss everyday base layer.",
     "price": 16.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/540/622/8240540622_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=T-shirt"
   },
   {
     "id": "pb-053",
     "name": "Black Naruto print T-shirt",
-    "description": "Black Naruto print T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Black T-shirt with a Naruto anime character print on the front. Regular fit in lightweight cotton for casual anime-inspired style.",
     "price": 15.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/963/250/8240963250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Black%20Naruto%20print%20T-shirt"
   },
   {
     "id": "pb-054",
     "name": "White building photo print T-shirt",
-    "description": "White building photo print T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "White T-shirt with a photographic building print on the chest. A contemporary art-inspired design in a relaxed cotton fit.",
     "price": 20.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/963/800/8240963800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=White%20building%20photo%20print%20T-shirt"
   },
   {
     "id": "pb-055",
     "name": "Nobody Cares About Anything T-shirt",
-    "description": "Nobody Cares About Anything T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Statement T-shirt with a 'Nobody Cares About Anything' slogan print. Relaxed fit in cotton jersey with an attitude-driven design.",
     "price": 18.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/916/800/8241916800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Nobody%20Cares%20About%20Anything%20T-shirt"
   },
   {
     "id": "pb-056",
     "name": "Tupac Family Tree T-shirt",
-    "description": "Tupac Family Tree T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt with a Tupac 'Family Tree' tribute graphic. Vintage-washed feel in a regular fit for a hip-hop-inspired wardrobe.",
     "price": 8.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/539/250/8241539250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,band"
+    "tags": "casual,streetwear,band",
+    "permalink": "https://www.pullandbear.com/search?query=Tupac%20Family%20Tree%20T-shirt"
   },
   {
     "id": "pb-057",
     "name": "Dark blue varsity T-shirt",
-    "description": "Dark blue varsity T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Dark blue T-shirt with varsity-inspired lettering and a crew neck. A sporty, collegiate look in comfortable cotton.",
     "price": 20.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4241/562/251/4241562251_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Dark%20blue%20varsity%20T-shirt"
   },
   {
     "id": "pb-058",
     "name": "Basic coloured long fit T-shirt",
-    "description": "Basic coloured long fit T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "Extended-length T-shirt in a bold colour with a dropped hem. A long-line fit perfect for layered streetwear outfits.",
     "price": 22.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8240/980/800/8240980800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20coloured%20long%20fit%20T-shirt"
   },
   {
     "id": "pb-059",
     "name": "White Tupac T-shirt",
-    "description": "White Tupac T-shirt. A Pull & Bear essential for your casual wardrobe.",
+    "description": "White T-shirt with a photographic Tupac portrait print. Soft cotton jersey in a relaxed fit for effortless hip-hop style.",
     "price": 15.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/903/250/8241903250_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear,band"
+    "tags": "casual,streetwear,band",
+    "permalink": "https://www.pullandbear.com/search?query=White%20Tupac%20T-shirt"
   },
   {
     "id": "pb-060",
     "name": "T-shirt with vertical stripes",
-    "description": "T-shirt with vertical stripes. A Pull & Bear essential for your casual wardrobe.",
+    "description": "T-shirt with woven vertical stripes for a retro-inspired casual look. Lightweight knit fabric with a relaxed, breezy fit.",
     "price": 14.0,
     "category": "T Shirts",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8201/501/711/8201501711_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "casual,streetwear"
+    "tags": "casual,streetwear",
+    "permalink": "https://www.pullandbear.com/search?query=T-shirt%20with%20vertical%20stripes"
   },
   {
     "id": "pb-061",
     "name": "Premium fabric oversize hoodie",
-    "description": "Premium fabric oversize hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Oversized hoodie in a premium heavyweight cotton blend. Drop shoulders and a boxy cut for a luxe, relaxed streetwear silhouette.",
     "price": 15.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/541/711/8591541711_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering,oversized"
+    "tags": "comfort,layering,oversized",
+    "permalink": "https://www.pullandbear.com/search?query=Premium%20fabric%20oversize%20hoodie"
   },
   {
     "id": "pb-062",
     "name": "Brown hoodie with STWD",
-    "description": "Brown hoodie with STWD. Comfortable and stylish for everyday wear.",
+    "description": "Brown-toned hoodie with STWD branding embroidered on the chest. Soft brushed interior with a drawstring hood and pouch pocket.",
     "price": 16.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/565/707/8591565707_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Brown%20hoodie%20with%20STWD"
   },
   {
     "id": "pb-063",
     "name": "Hoodie with sleeve lettering",
-    "description": "Hoodie with sleeve lettering. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie with bold lettering running down both sleeves. Fleece-lined with a front pouch pocket and ribbed trims for a sporty edge.",
     "price": 17.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/550/251/8591550251_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Hoodie%20with%20sleeve%20lettering"
   },
   {
     "id": "pb-064",
     "name": "Basic colourful hoodie",
-    "description": "Basic colourful hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Hoodie in a vibrant solid colour with a kangaroo pocket and drawstring hood. A colour-pop essential for casual everyday outfits.",
     "price": 18.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/913/402/8591913402_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20colourful%20hoodie"
   },
   {
     "id": "pb-065",
     "name": "Brown hoodie with slogan",
-    "description": "Brown hoodie with slogan. Comfortable and stylish for everyday wear.",
+    "description": "Brown hoodie with a printed slogan across the front. Warm fleece lining and a regular fit for relaxed, statement-driven style.",
     "price": 19.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/547/700/8591547700_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Brown%20hoodie%20with%20slogan"
   },
   {
     "id": "pb-066",
     "name": "Colour block hoodie with slogan",
-    "description": "Colour block hoodie with slogan. Comfortable and stylish for everyday wear.",
+    "description": "Colour-blocked hoodie with contrasting panels and a slogan print. A bold, graphic-driven piece with a drawstring hood and pouch pocket.",
     "price": 21.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/548/712/8591548712_2_6_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Colour%20block%20hoodie%20with%20slogan"
   },
   {
     "id": "pb-067",
     "name": "Black hoodie",
-    "description": "Black hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Classic black hoodie with a clean, minimal design. Soft fleece interior and ribbed trims make it a versatile layering staple.",
     "price": 26.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/515/800/8591515800_1_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering"
+    "tags": "comfort,layering",
+    "permalink": "https://www.pullandbear.com/search?query=Black%20hoodie"
   },
   {
     "id": "pb-068",
     "name": "Basic zip-up hoodie",
-    "description": "Basic zip-up hoodie. Comfortable and stylish for everyday wear.",
+    "description": "Full-zip hoodie with split kangaroo pockets and a drawstring hood. A wardrobe essential in soft cotton-blend fleece.",
     "price": 30.0,
     "category": "Hoodies",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8591/501/710/8591501710_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "comfort,layering,zip-up"
+    "tags": "comfort,layering,zip-up",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20zip-up%20hoodie"
   },
   {
     "id": "pb-069",
     "name": "Parka with nylon details",
-    "description": "Parka with nylon details. Essential outerwear from Pull & Bear.",
+    "description": "Mid-length parka with nylon contrast panels and a detachable hood. Multiple pockets and a drawstring waist for a functional, urban look.",
     "price": 80.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4751/501/800/4751501800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Parka%20with%20nylon%20details"
   },
   {
     "id": "pb-070",
     "name": "Coloured puffer gilet",
-    "description": "Coloured puffer gilet. Essential outerwear from Pull & Bear.",
+    "description": "Vibrant puffer gilet with a high collar and zip closure. Lightweight padded insulation in a bold colourway for standout layering.",
     "price": 78.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/542/800/8711542800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Coloured%20puffer%20gilet"
   },
   {
     "id": "pb-071",
     "name": "Dark blue denim jacket",
-    "description": "Dark blue denim jacket. Essential outerwear from Pull & Bear.",
+    "description": "Classic denim jacket in a dark blue wash with button-front closure. Chest pockets and a straight fit for timeless casual styling.",
     "price": 30.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/527/407/8711527407_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,denim"
+    "tags": "outerwear,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Dark%20blue%20denim%20jacket"
   },
   {
     "id": "pb-072",
     "name": "Basic comfort fit coat",
-    "description": "Basic comfort fit coat. Essential outerwear from Pull & Bear.",
+    "description": "Relaxed comfort-fit coat with a button-front closure and notch lapels. A smart-casual layer in a soft, structured fabric.",
     "price": 35.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8751/500/707/8751500707_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20comfort%20fit%20coat"
   },
   {
     "id": "pb-073",
     "name": "Basic quilted bomber jacket",
-    "description": "Basic quilted bomber jacket. Essential outerwear from Pull & Bear.",
+    "description": "Bomber jacket with quilted padding and a zip-front closure. Ribbed collar, cuffs, and hem for a clean, insulated everyday layer.",
     "price": 30.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/507/401/8711507401_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,bomber"
+    "tags": "outerwear,bomber",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20quilted%20bomber%20jacket"
   },
   {
     "id": "pb-074",
     "name": "Lightweight puffer jacket",
-    "description": "Lightweight puffer jacket. Essential outerwear from Pull & Bear.",
+    "description": "Lightweight puffer jacket with channel quilting and a stand-up collar. Packable insulation for effortless warmth on the go.",
     "price": 35.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/519/401/8711519401_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Lightweight%20puffer%20jacket"
   },
   {
     "id": "pb-075",
     "name": "Basic high collar puffer jacket",
-    "description": "Basic high collar puffer jacket. Essential outerwear from Pull & Bear.",
+    "description": "Puffer jacket with a high stand-up collar for added warmth and wind protection. Padded quilted construction with a zip closure.",
     "price": 40.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/531/505/8711531505_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Basic%20high%20collar%20puffer%20jacket"
   },
   {
     "id": "pb-076",
     "name": "Thermo-sealed puffer jacket",
-    "description": "Thermo-sealed puffer jacket. Essential outerwear from Pull & Bear.",
+    "description": "Puffer jacket with thermo-sealed seams for enhanced insulation and a sleek, stitch-free finish. Lightweight yet warm with a modern look.",
     "price": 46.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/545/800/8711545800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Thermo-sealed%20puffer%20jacket"
   },
   {
     "id": "pb-077",
     "name": "Black 3M Thinsulate anorak jacket",
-    "description": "Black 3M Thinsulate anorak jacket. Essential outerwear from Pull & Bear.",
+    "description": "Anorak jacket insulated with 3M Thinsulate technology for superior warmth. Half-zip design with a hood and multiple utility pockets.",
     "price": 50.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/568/800/8711568800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Black%203M%20Thinsulate%20anorak%20jacket"
   },
   {
     "id": "pb-078",
     "name": "Reversible faux shearling jacket",
-    "description": "Reversible faux shearling jacket. Essential outerwear from Pull & Bear.",
+    "description": "Reversible jacket with a smooth exterior and a cosy faux shearling interior. Two looks in one for versatile cold-weather dressing.",
     "price": 55.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/4711/528/505/4711528505_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear"
+    "tags": "outerwear",
+    "permalink": "https://www.pullandbear.com/search?query=Reversible%20faux%20shearling%20jacket"
   },
   {
     "id": "pb-079",
     "name": "Coloured puffer gile",
-    "description": "Coloured puffer gile. Essential outerwear from Pull & Bear.",
+    "description": "Colourful sleeveless puffer gilet with a zip-front and stand-up collar. A lightweight, padded layer to brighten up any outfit.",
     "price": 36.0,
     "category": "Jackets",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8711/542/600/8711542600_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "outerwear,puffer"
+    "tags": "outerwear,puffer",
+    "permalink": "https://www.pullandbear.com/search?query=Coloured%20puffer%20gile"
   },
   {
     "id": "pb-080",
     "name": "Blue-Faded standard fit jeans",
-    "description": "Blue-Faded standard fit jeans. Perfect fit from Pull & Bear's collection.",
+    "description": "Standard-fit jeans in a faded blue wash with classic five-pocket styling. Comfortable denim with a straight leg for a timeless look.",
     "price": 25.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/800/8676519800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,denim"
+    "tags": "bottoms,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Blue-Faded%20standard%20fit%20jeans"
   },
   {
     "id": "pb-081",
     "name": "Black-Faded standard fit jeans",
-    "description": "Black-Faded standard fit jeans. Perfect fit from Pull & Bear's collection.",
+    "description": "Standard-fit jeans in a faded black wash with a worn-in vintage feel. Five-pocket design with a zip fly and straight leg.",
     "price": 35.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/806/8676519806_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,denim"
+    "tags": "bottoms,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Black-Faded%20standard%20fit%20jeans"
   },
   {
     "id": "pb-082",
     "name": "Black-Premium fabric joggers with logo",
-    "description": "Black-Premium fabric joggers with logo. Perfect fit from Pull & Bear's collection.",
+    "description": "Black joggers in premium heavyweight fabric with an embroidered logo detail. Elasticated waist and cuffed ankles for a refined athleisure fit.",
     "price": 45.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/533/712/8676533712_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,joggers"
+    "tags": "bottoms,joggers",
+    "permalink": "https://www.pullandbear.com/search?query=Black-Premium%20fabric%20joggers%20with%20logo"
   },
   {
     "id": "pb-083",
     "name": "Black-Faded wide-leg jeans",
-    "description": "Black-Faded wide-leg jeans. Perfect fit from Pull & Bear's collection.",
+    "description": "Wide-leg jeans in a faded black wash for a relaxed, retro-inspired silhouette. High-waist design with a zip fly and roomy leg.",
     "price": 45.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/527/700/8676527700_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,denim"
+    "tags": "bottoms,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Black-Faded%20wide-leg%20jeans"
   },
   {
     "id": "pb-084",
     "name": "Navy blue joggers",
-    "description": "Navy blue joggers. Perfect fit from Pull & Bear's collection.",
+    "description": "Navy blue joggers with an elasticated drawstring waist and cuffed hems. Soft-touch fleece fabric for all-day comfort.",
     "price": 45.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/518/800/8676518800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,joggers"
+    "tags": "bottoms,joggers",
+    "permalink": "https://www.pullandbear.com/search?query=Navy%20blue%20joggers"
   },
   {
     "id": "pb-085",
     "name": "Black-Coloured carpenter jeans",
-    "description": "Black-Coloured carpenter jeans. Perfect fit from Pull & Bear's collection.",
+    "description": "Carpenter-style jeans in black with utility loop detailing and a relaxed fit. Durable denim with a workwear-inspired silhouette.",
     "price": 20.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/526/800/8676526800_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,denim"
+    "tags": "bottoms,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Black-Coloured%20carpenter%20jeans"
   },
   {
     "id": "pb-086",
     "name": "Navy blue Basic pique joggers",
-    "description": "Navy blue Basic pique joggers. Perfect fit from Pull & Bear's collection.",
+    "description": "Navy blue joggers in a textured pique knit fabric. Elasticated waist with a drawstring and tapered leg for a smart casual finish.",
     "price": 18.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/503/809/8676503809_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,joggers"
+    "tags": "bottoms,joggers",
+    "permalink": "https://www.pullandbear.com/search?query=Navy%20blue%20Basic%20pique%20joggers"
   },
   {
     "id": "pb-087",
     "name": "Black-Standard fit chino trousers",
-    "description": "Black-Standard fit chino trousers. Perfect fit from Pull & Bear's collection.",
+    "description": "Black chino trousers in a standard fit with a flat front and belt loops. Versatile cotton twill that transitions from casual to smart.",
     "price": 16.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/514/712/8676514712_4_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,chinos"
+    "tags": "bottoms,chinos",
+    "permalink": "https://www.pullandbear.com/search?query=Black-Standard%20fit%20chino%20trousers"
   },
   {
     "id": "pb-088",
     "name": "Faded standard fit jeans",
-    "description": "Faded standard fit jeans. Perfect fit from Pull & Bear's collection.",
+    "description": "Standard-fit jeans with a lightly faded wash for a lived-in look. Classic five-pocket construction in comfortable stretch denim.",
     "price": 25.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/800/8676519800_2_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,denim"
+    "tags": "bottoms,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Faded%20standard%20fit%20jeans"
   },
   {
     "id": "pb-089",
     "name": "Casual Jeans",
-    "description": "Casual Jeans. Perfect fit from Pull & Bear's collection.",
+    "description": "Relaxed casual jeans with a comfortable mid-rise and straight leg. Easy-wearing denim in a versatile dark wash.",
     "price": 35.0,
     "category": "Trousers",
     "image_url": "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/806/8676519806_2_1_8.jpg",
     "brand": "Pull & Bear",
-    "tags": "bottoms,denim"
+    "tags": "bottoms,denim",
+    "permalink": "https://www.pullandbear.com/search?query=Casual%20Jeans"
   }
 ]

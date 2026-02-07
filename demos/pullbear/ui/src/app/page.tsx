@@ -7,7 +7,7 @@ export default async function HomePage() {
   const featuredProducts = await getFeaturedProducts(8);
   const categories = await getCategories();
 
-  const categoryImages: Record<string, string> = {
+  const categoryImagesBySlug: Record<string, string> = {
     "t-shirts":
       "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8241/912/800/8241912800_4_1_8.jpg",
     hoodies:
@@ -17,6 +17,9 @@ export default async function HomePage() {
     trousers:
       "https://static.pullandbear.net/2/photos//2021/I/0/2/p/8676/519/800/8676519800_4_1_8.jpg",
   };
+
+  const getCategoryImage = (slug: string) =>
+    categoryImagesBySlug[slug] || categoryImagesBySlug[slug.toLowerCase()] || null;
 
   return (
     <div>
@@ -51,12 +54,14 @@ export default async function HomePage() {
               href={`/shop?category=${category.slug}`}
               className="group relative aspect-[3/4] overflow-hidden"
             >
-              <Image
-                src={categoryImages[category.slug] || ""}
-                alt={category.name}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
+              {getCategoryImage(category.slug) && (
+                <Image
+                  src={getCategoryImage(category.slug)!}
+                  alt={category.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              )}
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
               <div className="absolute bottom-8 left-8">
                 <span className="text-white text-lg font-bold tracking-[0.1em] uppercase">
@@ -118,8 +123,8 @@ export default async function HomePage() {
             </p>
 
             <div className="grid grid-cols-3 gap-8 mb-10">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 border border-[var(--color-border)] flex items-center justify-center">
+              <Link href="/shop?mode=search" className="text-center group">
+                <div className="w-12 h-12 mx-auto mb-3 border border-[var(--color-border)] flex items-center justify-center group-hover:border-black transition-colors">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -137,9 +142,9 @@ export default async function HomePage() {
                 <p className="text-[10px] font-bold tracking-[0.1em] uppercase">
                   Search
                 </p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 bg-black text-white flex items-center justify-center">
+              </Link>
+              <Link href="/shop?mode=sift" className="text-center group">
+                <div className="w-12 h-12 mx-auto mb-3 bg-black text-white flex items-center justify-center group-hover:bg-black/80 transition-colors">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -157,9 +162,9 @@ export default async function HomePage() {
                 <p className="text-[10px] font-bold tracking-[0.1em] uppercase">
                   Sift AI
                 </p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto mb-3 border border-[var(--color-border)] flex items-center justify-center">
+              </Link>
+              <Link href="/shop?mode=chat" className="text-center group">
+                <div className="w-12 h-12 mx-auto mb-3 border border-[var(--color-border)] flex items-center justify-center group-hover:border-black transition-colors">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -177,10 +182,10 @@ export default async function HomePage() {
                 <p className="text-[10px] font-bold tracking-[0.1em] uppercase">
                   Chat
                 </p>
-              </div>
+              </Link>
             </div>
 
-            <Link href="/shop" className="btn btn-primary">
+            <Link href="/shop?mode=sift" className="btn btn-primary">
               Try AI Search
             </Link>
           </div>

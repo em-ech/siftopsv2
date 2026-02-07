@@ -83,6 +83,7 @@ def main():
             image_url=p.get("image_url"),
             brand=p.get("brand", "Pull & Bear"),
             tags=tags,
+            permalink=p.get("permalink", ""),
             stock_status="instock",
         )
         raw_products.append(raw)
